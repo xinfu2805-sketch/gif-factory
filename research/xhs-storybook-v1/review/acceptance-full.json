@@ -1,0 +1,16 @@
+{
+  "scope": "full",
+  "status": {
+    "TECHNICAL_PASS": "BLOCKED",
+    "VISUAL_PASS": "BLOCKED",
+    "ACTION_PASS": "BLOCKED",
+    "EDITORIAL_PASS": "BLOCKED",
+    "AUDIO_PASS": "BLOCKED",
+    "PUBLISH_READY": "BLOCKED"
+  },
+  "video_sha256": null,
+  "objective": {
+    "reason": "media_missing"
+  },
+  "action_audit": null
+}

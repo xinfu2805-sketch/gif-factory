@@ -6,10 +6,10 @@
     1080,
     1920
   ],
-  "pose_sequence": [
-    9,
+  "pose_assets": [
+    3,
     5,
-    3
+    9
   ],
   "contact_points": {
     "9": [

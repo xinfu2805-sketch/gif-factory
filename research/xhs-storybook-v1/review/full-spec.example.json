@@ -1,0 +1,6 @@
+{
+  "video": "output/full-story.mp4",
+  "duration": 0,
+  "frames": 0,
+  "note": "Create full-spec.json with measured final duration and frame count only after a full story exists. The pilot is never a full-story input."
+}

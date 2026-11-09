@@ -1,6 +1,6 @@
 [
   {
-    "file": "output/music-original.wav",
+    "file": "output/music-pipeline-test.wav",
     "sha256": "b23d405d64d8bef16e4a158a5a030a7b2f19d16aa3627bdb3cd9804a4942ea0e",
     "mean_dbfs": -26.3,
     "peak_dbfs": -15.2,

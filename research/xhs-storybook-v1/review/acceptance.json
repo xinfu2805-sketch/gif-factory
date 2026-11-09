@@ -1,59 +1,376 @@
 {
+  "scope": "pilot",
   "status": {
     "TECHNICAL_PASS": "PASS",
     "VISUAL_PASS": "BLOCKED",
     "ACTION_PASS": "BLOCKED",
-    "AUDIO_PASS": "BLOCKED",
     "EDITORIAL_PASS": "BLOCKED",
+    "AUDIO_PASS": "BLOCKED",
     "PUBLISH_READY": "BLOCKED"
   },
+  "video_sha256": "4131a2b2d8199c3a7a2686a3317492c38d5003425267da71a40d3c8eb550447d",
   "objective": {
-    "resolution": [
-      1080,
-      1920
-    ],
-    "avg_fps": "6/1",
-    "decoded_frames": 24,
-    "duration_s": 4.0,
+    "width": 1080,
+    "height": 1920,
+    "fps": "6/1",
+    "frames": 24,
+    "duration": 4.0,
     "audio_codec": "aac",
-    "audio_duration_s": 4.0,
-    "audio_start_s": 0.0,
-    "video_start_s": 0.0,
+    "audio_duration": 4.0,
+    "audio_start": 0.0,
+    "video_start": 0.0,
     "audio_peak_dbfs": -11.0,
-    "audio_mean_dbfs": -24.0,
     "decode_errors": ""
   },
-  "sample_sha256": "4603765ce30f9a02c0e78e7bd782927a0ea6b4fe519e6a9833cd9f2aaba4c137",
-  "directors": {
-    "VISUAL_PASS": {
-      "decision": "BLOCKED",
-      "reviewer": "",
-      "evidence_sha256": "",
-      "reason": "Close-up pilot inspected by production agent; independent visual director and mobile UI check pending."
-    },
-    "ACTION_PASS": {
-      "decision": "BLOCKED",
-      "reviewer": "",
-      "evidence_sha256": "",
-      "reason": "Contact and stone/water state visibly improved; independent action director must review pose transitions in normal playback."
-    },
-    "AUDIO_PASS": {
-      "decision": "BLOCKED",
-      "reviewer": "",
-      "evidence_sha256": "",
-      "reason": "No two natural Chinese TTS auditions; no independent listening of music, Foley, and combined mix."
-    },
-    "EDITORIAL_PASS": {
-      "decision": "BLOCKED",
-      "reviewer": "",
-      "evidence_sha256": "",
-      "reason": "Story, cover, note copy, and rights ledger need editorial sign-off before publication."
+  "action_audit": {
+    "frames": [
+      {
+        "frame": 0,
+        "pose_asset": 5,
+        "stage": "GROUND",
+        "representation": "separate",
+        "target_count": 1,
+        "point_px": [
+          748,
+          1223
+        ],
+        "water_top_px": 1175,
+        "delta_from_previous_px": null
+      },
+      {
+        "frame": 1,
+        "pose_asset": 5,
+        "stage": "GROUND",
+        "representation": "separate",
+        "target_count": 1,
+        "point_px": [
+          748,
+          1223
+        ],
+        "water_top_px": 1175,
+        "delta_from_previous_px": 0.0
+      },
+      {
+        "frame": 2,
+        "pose_asset": 5,
+        "stage": "GROUND",
+        "representation": "separate",
+        "target_count": 1,
+        "point_px": [
+          748,
+          1223
+        ],
+        "water_top_px": 1175,
+        "delta_from_previous_px": 0.0
+      },
+      {
+        "frame": 3,
+        "pose_asset": 9,
+        "stage": "BEAK_CONTACT",
+        "representation": "embedded_in_pose_09",
+        "target_count": 1,
+        "point_px": [
+          748,
+          1223
+        ],
+        "water_top_px": 1175,
+        "delta_from_previous_px": 0.0
+      },
+      {
+        "frame": 4,
+        "pose_asset": 9,
+        "stage": "BEAK_CONTACT",
+        "representation": "embedded_in_pose_09",
+        "target_count": 1,
+        "point_px": [
+          748,
+          1223
+        ],
+        "water_top_px": 1175,
+        "delta_from_previous_px": 0.0
+      },
+      {
+        "frame": 5,
+        "pose_asset": 5,
+        "stage": "HELD",
+        "representation": "separate",
+        "target_count": 1,
+        "point_px": [
+          762,
+          1025
+        ],
+        "water_top_px": 1175,
+        "delta_from_previous_px": 198.49
+      },
+      {
+        "frame": 6,
+        "pose_asset": 5,
+        "stage": "HELD",
+        "representation": "separate",
+        "target_count": 1,
+        "point_px": [
+          762,
+          1025
+        ],
+        "water_top_px": 1175,
+        "delta_from_previous_px": 0.0
+      },
+      {
+        "frame": 7,
+        "pose_asset": 5,
+        "stage": "HELD",
+        "representation": "separate",
+        "target_count": 1,
+        "point_px": [
+          762,
+          1025
+        ],
+        "water_top_px": 1175,
+        "delta_from_previous_px": 0.0
+      },
+      {
+        "frame": 8,
+        "pose_asset": 5,
+        "stage": "HELD",
+        "representation": "separate",
+        "target_count": 1,
+        "point_px": [
+          762,
+          1025
+        ],
+        "water_top_px": 1175,
+        "delta_from_previous_px": 0.0
+      },
+      {
+        "frame": 9,
+        "pose_asset": 3,
+        "stage": "HELD",
+        "representation": "separate",
+        "target_count": 1,
+        "point_px": [
+          770,
+          755
+        ],
+        "water_top_px": 1175,
+        "delta_from_previous_px": 270.12
+      },
+      {
+        "frame": 10,
+        "pose_asset": 3,
+        "stage": "HELD",
+        "representation": "separate",
+        "target_count": 1,
+        "point_px": [
+          770,
+          755
+        ],
+        "water_top_px": 1175,
+        "delta_from_previous_px": 0.0
+      },
+      {
+        "frame": 11,
+        "pose_asset": 3,
+        "stage": "HELD",
+        "representation": "separate",
+        "target_count": 1,
+        "point_px": [
+          770,
+          755
+        ],
+        "water_top_px": 1175,
+        "delta_from_previous_px": 0.0
+      },
+      {
+        "frame": 12,
+        "pose_asset": 3,
+        "stage": "RELEASED",
+        "representation": "separate",
+        "target_count": 1,
+        "point_px": [
+          770.0,
+          755.0
+        ],
+        "water_top_px": 1175,
+        "delta_from_previous_px": 0.0
+      },
+      {
+        "frame": 13,
+        "pose_asset": 3,
+        "stage": "RELEASED",
+        "representation": "separate",
+        "target_count": 1,
+        "point_px": [
+          822.5,
+          642.5
+        ],
+        "water_top_px": 1175,
+        "delta_from_previous_px": 124.15
+      },
+      {
+        "frame": 14,
+        "pose_asset": 3,
+        "stage": "RELEASED",
+        "representation": "separate",
+        "target_count": 1,
+        "point_px": [
+          875.0,
+          790.0
+        ],
+        "water_top_px": 1175,
+        "delta_from_previous_px": 156.56
+      },
+      {
+        "frame": 15,
+        "pose_asset": 3,
+        "stage": "FALLING_IN_JAR",
+        "representation": "separate",
+        "target_count": 1,
+        "point_px": [
+          875.0,
+          810.0
+        ],
+        "water_top_px": 1175,
+        "delta_from_previous_px": 20.0
+      },
+      {
+        "frame": 16,
+        "pose_asset": 3,
+        "stage": "FALLING_IN_JAR",
+        "representation": "separate",
+        "target_count": 1,
+        "point_px": [
+          882.79,
+          960.0
+        ],
+        "water_top_px": 1175,
+        "delta_from_previous_px": 150.2
+      },
+      {
+        "frame": 17,
+        "pose_asset": 3,
+        "stage": "FALLING_IN_JAR",
+        "representation": "separate",
+        "target_count": 1,
+        "point_px": [
+          882.79,
+          1110.0
+        ],
+        "water_top_px": 1175,
+        "delta_from_previous_px": 150.0
+      },
+      {
+        "frame": 18,
+        "pose_asset": 3,
+        "stage": "FALLING_IN_JAR",
+        "representation": "separate",
+        "target_count": 1,
+        "point_px": [
+          875.0,
+          1260.0
+        ],
+        "water_top_px": 1175,
+        "delta_from_previous_px": 150.2
+      },
+      {
+        "frame": 19,
+        "pose_asset": 3,
+        "stage": "SUNK",
+        "representation": "separate",
+        "target_count": 1,
+        "point_px": [
+          888,
+          1267
+        ],
+        "water_top_px": 1130,
+        "delta_from_previous_px": 14.76
+      },
+      {
+        "frame": 20,
+        "pose_asset": 3,
+        "stage": "SUNK",
+        "representation": "separate",
+        "target_count": 1,
+        "point_px": [
+          888,
+          1267
+        ],
+        "water_top_px": 1085,
+        "delta_from_previous_px": 0.0
+      },
+      {
+        "frame": 21,
+        "pose_asset": 3,
+        "stage": "SUNK",
+        "representation": "separate",
+        "target_count": 1,
+        "point_px": [
+          888,
+          1267
+        ],
+        "water_top_px": 1040,
+        "delta_from_previous_px": 0.0
+      },
+      {
+        "frame": 22,
+        "pose_asset": 3,
+        "stage": "SUNK",
+        "representation": "separate",
+        "target_count": 1,
+        "point_px": [
+          888,
+          1267
+        ],
+        "water_top_px": 995,
+        "delta_from_previous_px": 0.0
+      },
+      {
+        "frame": 23,
+        "pose_asset": 3,
+        "stage": "SUNK",
+        "representation": "separate",
+        "target_count": 1,
+        "point_px": [
+          888,
+          1267
+        ],
+        "water_top_px": 950,
+        "delta_from_previous_px": 0.0
+      }
+    ],
+    "target_unique_every_frame": true,
+    "distinct_pose_assets": 3,
+    "rendered_frames": 24,
+    "coordinate_continuity_pass": false,
+    "violations": [
+      "frame_5: stone_jump_198.49px_gt_90px",
+      "frame_9: stone_jump_270.12px_gt_90px"
+    ],
+    "video_sha256": "4131a2b2d8199c3a7a2686a3317492c38d5003425267da71a40d3c8eb550447d",
+    "source_frame_sha256": {
+      "000": "f29ecd45e5bbc77a8eb199fa2f45bf0649e181d2854c64b7635ce8cda76fec39",
+      "001": "f29ecd45e5bbc77a8eb199fa2f45bf0649e181d2854c64b7635ce8cda76fec39",
+      "002": "f29ecd45e5bbc77a8eb199fa2f45bf0649e181d2854c64b7635ce8cda76fec39",
+      "003": "914d4b8401186cb01f08ad1844f335d21d9a466f00d4f84fc4a9529eb530eba8",
+      "004": "914d4b8401186cb01f08ad1844f335d21d9a466f00d4f84fc4a9529eb530eba8",
+      "005": "04c272adcc1123e7586e3bbdc511e9ea9afd96c01269720e6f468288595b6596",
+      "006": "04c272adcc1123e7586e3bbdc511e9ea9afd96c01269720e6f468288595b6596",
+      "007": "04c272adcc1123e7586e3bbdc511e9ea9afd96c01269720e6f468288595b6596",
+      "008": "04c272adcc1123e7586e3bbdc511e9ea9afd96c01269720e6f468288595b6596",
+      "009": "b5f6dda85742d47c47f121293a14b633ddf2c79f500bff6939f20637cc4493c5",
+      "010": "b5f6dda85742d47c47f121293a14b633ddf2c79f500bff6939f20637cc4493c5",
+      "011": "b5f6dda85742d47c47f121293a14b633ddf2c79f500bff6939f20637cc4493c5",
+      "012": "b5f6dda85742d47c47f121293a14b633ddf2c79f500bff6939f20637cc4493c5",
+      "013": "8d6bfed0822d96a6640560c9b814785f64c4bf37fe912e1ff6f19dab5c7ddd07",
+      "014": "da571d3bd6fb369e239d96e3783a4929a2007791963798b2e1958ec63995a1a4",
+      "015": "79304c383c79e699e0b5f7af2d544bdce97e9a235d1861e39689f298b63d1848",
+      "016": "d6e771777ef3e8a3de9a33e4ef3f62315bd445fbdf63545121ba094a48e4d249",
+      "017": "f2f2cc535e7cc68440b141c351c6736fd5e8649261c73137a2ce19c11fc604cd",
+      "018": "506f8f760a531488d15b1b0b5622a7ef3801b17a60b111972c118ec4334eb95d",
+      "019": "c1bb73eb8c2322193a0c944878763aaae118dfcf2d69eecd9bc72d4d2ac0173a",
+      "020": "fdb71a6c4b3193d2057200316fb147bd9168aa81994f1cc6b6f1ee11933511b6",
+      "021": "66dd0a1ba604d07eccaa5eb244496dba3d47ce7066df4a9d7ec8e462dc46a688",
+      "022": "6d30263e1925fb4ff4e1285b616582585f5410b122e67915d962d0ea20a6f5c0",
+      "023": "e691c05966990b8a22dfd0f664db9b34f87906581983c6daa48fba34290f50c5"
     }
-  },
-  "limitations": [
-    "No Chinese TTS voices were available; two natural 8–10 s auditions have not been made.",
-    "Music and Foley are original procedural stems; independent human listening has not occurred.",
-    "Visual and action director approval remain pending.",
-    "A pilot is not a completed publish package."
-  ]
+  }
 }
