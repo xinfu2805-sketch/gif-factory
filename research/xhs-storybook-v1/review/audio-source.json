@@ -1,0 +1,9 @@
+{
+  "file": "output/music-pipeline-test.wav",
+  "source": "render_pilot.py procedural sine-wave synthesis",
+  "use_scope": "pipeline_test_only",
+  "formal_background_music": false,
+  "music_quality_review": "BLOCKED",
+  "human_listening": "not performed",
+  "publish_rights_assessment": "not applicable to test-only music; replacement requires verified source and rights ledger"
+}

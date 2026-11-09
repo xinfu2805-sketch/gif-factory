@@ -1,0 +1,4 @@
+video_sha256=4131a2b2d8199c3a7a2686a3317492c38d5003425267da71a40d3c8eb550447d
+AAC mean_volume=-24.0 dBFS
+AAC max_volume=-11.0 dBFS
+quality_listening=BLOCKED

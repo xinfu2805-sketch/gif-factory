@@ -1,0 +1,100 @@
+{
+  "atlas_sha256": "895bba58c70d1c24f70a5f00a95a654ec4fd6a9513f681488ce6dfbd1938d805",
+  "source_references": [
+    "assets/crow-pose-09.png",
+    "assets/crow-pose-05.png",
+    "assets/crow-pose-03.png"
+  ],
+  "new_poses": [
+    {
+      "pose": 10,
+      "atlas_cell": [
+        0,
+        0
+      ],
+      "source_bbox_at_alpha16": [
+        24,
+        130,
+        482,
+        429
+      ],
+      "padded_offset": [
+        44,
+        31
+      ],
+      "sha256": "3079e37fdca41d83ffc1d912d3e122bebf7eb9f779b6d36ffce16fdab5da2c27"
+    },
+    {
+      "pose": 11,
+      "atlas_cell": [
+        1,
+        0
+      ],
+      "source_bbox_at_alpha16": [
+        18,
+        119,
+        467,
+        430
+      ],
+      "padded_offset": [
+        44,
+        30
+      ],
+      "sha256": "bd52f1347186df65f91c0683acd50234ef4a11af1c1228772e4a524ebda90314"
+    },
+    {
+      "pose": 12,
+      "atlas_cell": [
+        2,
+        0
+      ],
+      "source_bbox_at_alpha16": [
+        13,
+        92,
+        456,
+        429
+      ],
+      "padded_offset": [
+        44,
+        31
+      ],
+      "sha256": "6bce2a6d973b3dcf15b956ca2e0174e9cd6bfec91a6ff0fd640247c0da374a04"
+    },
+    {
+      "pose": 13,
+      "atlas_cell": [
+        0,
+        1
+      ],
+      "source_bbox_at_alpha16": [
+        35,
+        48,
+        464,
+        441
+      ],
+      "padded_offset": [
+        44,
+        19
+      ],
+      "sha256": "c2ec89627a7b3663f03cf97c5c5fc04a396fbfbf5311abf5a87ba9171d4b599e"
+    },
+    {
+      "pose": 14,
+      "atlas_cell": [
+        1,
+        1
+      ],
+      "source_bbox_at_alpha16": [
+        20,
+        27,
+        428,
+        441
+      ],
+      "padded_offset": [
+        44,
+        19
+      ],
+      "sha256": "37984fda1c49cef133f093849c864f021f667facd6e787563d6d5c1a279d9547"
+    }
+  ]
+}

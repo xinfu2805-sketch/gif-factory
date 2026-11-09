@@ -1,0 +1,23 @@
+[
+  {
+    "file": "output/music-pipeline-test.wav",
+    "sha256": "b23d405d64d8bef16e4a158a5a030a7b2f19d16aa3627bdb3cd9804a4942ea0e",
+    "mean_dbfs": -26.3,
+    "peak_dbfs": -15.2,
+    "human_listened": false
+  },
+  {
+    "file": "output/foley-original.wav",
+    "sha256": "3b41146391abc958ff55c55cd1d22e531eea278966373ff12ddeecbdd975da37",
+    "mean_dbfs": -39.5,
+    "peak_dbfs": -19.7,
+    "human_listened": false
+  },
+  {
+    "file": "output/mix-no-voice.wav",
+    "sha256": "a618983cf902f15ed85fbaa9e829363019659d674dc6551f20e5ccbd2f597631",
+    "mean_dbfs": -24.0,
+    "peak_dbfs": -11.0,
+    "human_listened": false
+  }
+]

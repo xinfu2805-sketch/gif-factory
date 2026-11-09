@@ -1,0 +1,12 @@
+test_audio_fields_and_test_music_cannot_sign_pass (test_publish_gate.PublishGateTests.test_audio_fields_and_test_music_cannot_sign_pass) ... ok
+test_filled_review_fields_without_matching_evidence_rejected (test_publish_gate.PublishGateTests.test_filled_review_fields_without_matching_evidence_rejected) ... ok
+test_missing_full_video_has_separate_blocked_gate (test_publish_gate.PublishGateTests.test_missing_full_video_has_separate_blocked_gate) ... ok
+test_pilot_technical_pass_cannot_be_publish_ready (test_publish_gate.PublishGateTests.test_pilot_technical_pass_cannot_be_publish_ready) ... ok
+test_two_existing_voice_files_without_listening_do_not_pass (test_publish_gate.PublishGateTests.test_two_existing_voice_files_without_listening_do_not_pass) ... ok
+test_one_target_and_correct_state_order_but_missing_inbetweens (test_publish_gate.StoneAuditTests.test_one_target_and_correct_state_order_but_missing_inbetweens) ... ok
+test_out_of_range_frame_rejected (test_publish_gate.StoneAuditTests.test_out_of_range_frame_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.131s
+
+OK

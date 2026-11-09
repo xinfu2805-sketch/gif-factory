@@ -1,0 +1,19 @@
+{
+  "VISUAL_PASS": {
+    "decision": "BLOCKED", "reviewer": "", "reviewed_at": "", "reviewed_media_sha256": "", "observations": "", "evidence_file": "", "evidence_sha256": "",
+    "reason": "Independent visual director and mobile UI review pending."
+  },
+  "ACTION_PASS": {
+    "decision": "BLOCKED", "reviewer": "", "reviewed_at": "", "reviewed_media_sha256": "", "observations": "", "evidence_file": "", "evidence_sha256": "", "full_action_review_complete": false,
+    "reason": "Frame 5 and frame 9 stone/beak jumps require additional drawn poses and normal-speed review."
+  },
+  "AUDIO_PASS": {
+    "decision": "BLOCKED", "reviewer": "", "reviewed_at": "", "reviewed_media_sha256": "", "observations": "", "evidence_file": "", "evidence_sha256": "",
+    "voice_auditions": [], "tracks": {}, "final_mix_listening_review": {}, "mix_manifest": {},
+    "reason": "No two Chinese TTS auditions, formal music, or independent narration/music/Foley/mix listening reviews."
+  },
+  "EDITORIAL_PASS": {
+    "decision": "BLOCKED", "reviewer": "", "reviewed_at": "", "reviewed_media_sha256": "", "observations": "", "evidence_file": "", "evidence_sha256": "", "cover_file": "", "note_file": "", "rights_ledger": "",
+    "reason": "Cover, note copy, rights ledger, and editorial sign-off missing."
+  }
+}

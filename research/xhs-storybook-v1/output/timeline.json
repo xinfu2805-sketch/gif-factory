@@ -1,0 +1,42 @@
+{
+  "fps": 6,
+  "frames": 24,
+  "duration": 4,
+  "size": [
+    1080,
+    1920
+  ],
+  "pose_assets": [
+    3,
+    5,
+    9
+  ],
+  "contact_points": {
+    "9": [
+      748,
+      1223
+    ],
+    "5": [
+      762,
+      1025
+    ],
+    "3": [
+      770,
+      755
+    ]
+  },
+  "stone_ground": [
+    748,
+    1223
+  ],
+  "stone_release_frame": 12,
+  "stone_sinks_frames": [
+    15,
+    18
+  ],
+  "water_rise_frames": [
+    19,
+    23
+  ],
+  "narration": "not available; music and foley only"
+}

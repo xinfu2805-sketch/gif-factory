@@ -1,0 +1,11 @@
+{
+  "date_utc": "2026-11-09",
+  "official_model_url": "https://huggingface.co/hexgrad/Kokoro-82M-v1.1-zh",
+  "probe": "curl -IL --max-time 15 -sS -o /dev/null -w '%{http_code} %{url_effective}\\n' <official_model_url>",
+  "observed_error": "curl: (56) CONNECT tunnel failed, response 403",
+  "model_card_and_specific_license_verified": false,
+  "model_downloaded": false,
+  "tts_generated": false,
+  "runtime": {"memory_limit_bytes": 8589934592, "cpu_quota_microseconds": 200000, "cpu_period_microseconds": 100000, "python": "3.12"},
+  "installed_modules": {"torch": false, "kokoro": false, "misaki": false, "huggingface_hub": false, "transformers": false}
+}
