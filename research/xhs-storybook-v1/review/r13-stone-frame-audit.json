@@ -1,0 +1,362 @@
+{
+  "scope": "unrendered_candidate_plan_NOT_a_pass",
+  "size": [
+    1080,
+    1920
+  ],
+  "fps": 6,
+  "stone_is_separate_asset": true,
+  "frame_count": 24,
+  "planned_unique_stone_per_frame": true,
+  "rendered_unique_stone_verified": false,
+  "frame_5_original_delta_px": 198.49,
+  "frame_5_candidate_delta_px_approx": 28.16,
+  "frame_9_original_delta_px": 270.12,
+  "frame_9_candidate_delta_px_approx": 95.38,
+  "candidate_deltas_gt_90_px": [
+    {
+      "frame": 6,
+      "delta_px": 90.2
+    },
+    {
+      "frame": 7,
+      "delta_px": 93.38
+    },
+    {
+      "frame": 8,
+      "delta_px": 130.38
+    },
+    {
+      "frame": 9,
+      "delta_px": 95.38
+    }
+  ],
+  "coordinate_continuity_pass": false,
+  "action_pass": false,
+  "frames": [
+    {
+      "frame": 0,
+      "planned_stage": "GROUND",
+      "planned_pose": "crow-pose-05",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": [
+        748,
+        1223
+      ],
+      "delta_px_approx": null,
+      "anchor_verified_on_scene": false,
+      "asset_ready": true,
+      "reason": null
+    },
+    {
+      "frame": 1,
+      "planned_stage": "GROUND",
+      "planned_pose": "crow-pose-05",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": [
+        748,
+        1223
+      ],
+      "delta_px_approx": 0.0,
+      "anchor_verified_on_scene": false,
+      "asset_ready": true,
+      "reason": null
+    },
+    {
+      "frame": 2,
+      "planned_stage": "GROUND",
+      "planned_pose": "crow-pose-05",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": [
+        748,
+        1223
+      ],
+      "delta_px_approx": 0.0,
+      "anchor_verified_on_scene": false,
+      "asset_ready": true,
+      "reason": null
+    },
+    {
+      "frame": 3,
+      "planned_stage": "BEAK_CONTACT",
+      "planned_pose": "MISSING_CLEAN_GROUND_CONTACT",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": [
+        748,
+        1223
+      ],
+      "delta_px_approx": 0.0,
+      "anchor_verified_on_scene": false,
+      "asset_ready": false,
+      "reason": "clean ground-contact pose missing"
+    },
+    {
+      "frame": 4,
+      "planned_stage": "BEAK_CONTACT",
+      "planned_pose": "MISSING_CLEAN_GROUND_CONTACT",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": [
+        748,
+        1223
+      ],
+      "delta_px_approx": 0.0,
+      "anchor_verified_on_scene": false,
+      "asset_ready": false,
+      "reason": "clean ground-contact pose missing"
+    },
+    {
+      "frame": 5,
+      "planned_stage": "HELD",
+      "planned_pose": "r13-clean-pose-10",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": [
+        740,
+        1196
+      ],
+      "delta_px_approx": 28.16,
+      "anchor_verified_on_scene": false,
+      "asset_ready": true,
+      "reason": null
+    },
+    {
+      "frame": 6,
+      "planned_stage": "HELD",
+      "planned_pose": "r13-clean-pose-11",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": [
+        734,
+        1106
+      ],
+      "delta_px_approx": 90.2,
+      "anchor_verified_on_scene": false,
+      "asset_ready": true,
+      "reason": null
+    },
+    {
+      "frame": 7,
+      "planned_stage": "HELD",
+      "planned_pose": "r13-clean-pose-12",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": [
+        750,
+        1014
+      ],
+      "delta_px_approx": 93.38,
+      "anchor_verified_on_scene": false,
+      "asset_ready": true,
+      "reason": null
+    },
+    {
+      "frame": 8,
+      "planned_stage": "HELD",
+      "planned_pose": "r13-clean-pose-13",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": [
+        760,
+        884
+      ],
+      "delta_px_approx": 130.38,
+      "anchor_verified_on_scene": false,
+      "asset_ready": true,
+      "reason": null
+    },
+    {
+      "frame": 9,
+      "planned_stage": "HELD",
+      "planned_pose": "r13-clean-pose-14",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": [
+        713,
+        801
+      ],
+      "delta_px_approx": 95.38,
+      "anchor_verified_on_scene": false,
+      "asset_ready": true,
+      "reason": null
+    },
+    {
+      "frame": 10,
+      "planned_stage": "HELD",
+      "planned_pose": "r13-clean-pose-14",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": [
+        713,
+        801
+      ],
+      "delta_px_approx": 0.0,
+      "anchor_verified_on_scene": false,
+      "asset_ready": true,
+      "reason": null
+    },
+    {
+      "frame": 11,
+      "planned_stage": "HELD",
+      "planned_pose": "r13-clean-pose-14",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": [
+        713,
+        801
+      ],
+      "delta_px_approx": 0.0,
+      "anchor_verified_on_scene": false,
+      "asset_ready": true,
+      "reason": null
+    },
+    {
+      "frame": 12,
+      "planned_stage": "RELEASED",
+      "planned_pose": "MISSING_TURN_OR_RELEASE_POSE",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": null,
+      "delta_px_approx": null,
+      "anchor_verified_on_scene": false,
+      "asset_ready": false,
+      "reason": "jar-facing and release pose/anchor missing"
+    },
+    {
+      "frame": 13,
+      "planned_stage": "RELEASED",
+      "planned_pose": "MISSING_TURN_OR_RELEASE_POSE",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": null,
+      "delta_px_approx": null,
+      "anchor_verified_on_scene": false,
+      "asset_ready": false,
+      "reason": "jar-facing and release pose/anchor missing"
+    },
+    {
+      "frame": 14,
+      "planned_stage": "RELEASED",
+      "planned_pose": "MISSING_TURN_OR_RELEASE_POSE",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": null,
+      "delta_px_approx": null,
+      "anchor_verified_on_scene": false,
+      "asset_ready": false,
+      "reason": "jar-facing and release pose/anchor missing"
+    },
+    {
+      "frame": 15,
+      "planned_stage": "FALLING_IN_JAR",
+      "planned_pose": "MISSING_TURN_OR_RELEASE_POSE",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": null,
+      "delta_px_approx": null,
+      "anchor_verified_on_scene": false,
+      "asset_ready": false,
+      "reason": "jar-facing and release pose/anchor missing"
+    },
+    {
+      "frame": 16,
+      "planned_stage": "FALLING_IN_JAR",
+      "planned_pose": "MISSING_TURN_OR_RELEASE_POSE",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": null,
+      "delta_px_approx": null,
+      "anchor_verified_on_scene": false,
+      "asset_ready": false,
+      "reason": "jar-facing and release pose/anchor missing"
+    },
+    {
+      "frame": 17,
+      "planned_stage": "FALLING_IN_JAR",
+      "planned_pose": "MISSING_TURN_OR_RELEASE_POSE",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": null,
+      "delta_px_approx": null,
+      "anchor_verified_on_scene": false,
+      "asset_ready": false,
+      "reason": "jar-facing and release pose/anchor missing"
+    },
+    {
+      "frame": 18,
+      "planned_stage": "FALLING_IN_JAR",
+      "planned_pose": "MISSING_TURN_OR_RELEASE_POSE",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": null,
+      "delta_px_approx": null,
+      "anchor_verified_on_scene": false,
+      "asset_ready": false,
+      "reason": "jar-facing and release pose/anchor missing"
+    },
+    {
+      "frame": 19,
+      "planned_stage": "SUNK",
+      "planned_pose": "MISSING_TURN_OR_RELEASE_POSE",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": null,
+      "delta_px_approx": null,
+      "anchor_verified_on_scene": false,
+      "asset_ready": false,
+      "reason": "jar-facing and release pose/anchor missing"
+    },
+    {
+      "frame": 20,
+      "planned_stage": "SUNK",
+      "planned_pose": "MISSING_TURN_OR_RELEASE_POSE",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": null,
+      "delta_px_approx": null,
+      "anchor_verified_on_scene": false,
+      "asset_ready": false,
+      "reason": "jar-facing and release pose/anchor missing"
+    },
+    {
+      "frame": 21,
+      "planned_stage": "SUNK",
+      "planned_pose": "MISSING_TURN_OR_RELEASE_POSE",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": null,
+      "delta_px_approx": null,
+      "anchor_verified_on_scene": false,
+      "asset_ready": false,
+      "reason": "jar-facing and release pose/anchor missing"
+    },
+    {
+      "frame": 22,
+      "planned_stage": "SUNK",
+      "planned_pose": "MISSING_TURN_OR_RELEASE_POSE",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": null,
+      "delta_px_approx": null,
+      "anchor_verified_on_scene": false,
+      "asset_ready": false,
+      "reason": "jar-facing and release pose/anchor missing"
+    },
+    {
+      "frame": 23,
+      "planned_stage": "SUNK",
+      "planned_pose": "MISSING_TURN_OR_RELEASE_POSE",
+      "stone_layer": "assets/r13-target-stone.png",
+      "planned_target_count": 1,
+      "stone_center_px_approx": null,
+      "delta_px_approx": null,
+      "anchor_verified_on_scene": false,
+      "asset_ready": false,
+      "reason": "jar-facing and release pose/anchor missing"
+    }
+  ]
+}
