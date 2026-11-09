@@ -1,0 +1,6 @@
+{
+  "VISUAL_PASS": {"decision": "BLOCKED", "reviewer": "", "evidence_sha256": "", "reason": "Close-up pilot inspected by production agent; independent visual director and mobile UI check pending."},
+  "ACTION_PASS": {"decision": "BLOCKED", "reviewer": "", "evidence_sha256": "", "reason": "Contact and stone/water state visibly improved; independent action director must review pose transitions in normal playback."},
+  "AUDIO_PASS": {"decision": "BLOCKED", "reviewer": "", "evidence_sha256": "", "reason": "No two natural Chinese TTS auditions; no independent listening of music, Foley, and combined mix."},
+  "EDITORIAL_PASS": {"decision": "BLOCKED", "reviewer": "", "evidence_sha256": "", "reason": "Story, cover, note copy, and rights ledger need editorial sign-off before publication."}
+}

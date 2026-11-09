@@ -1,0 +1,16 @@
+{
+  "file": "/workspace/gif-factory/research/xhs-storybook-v1/output/crow-action-pilot.mp4",
+  "width": 1080,
+  "height": 1920,
+  "fps": 6.0,
+  "nominal_fps": 6.0,
+  "duration": 4.0,
+  "decoded_frames": 24,
+  "checks_passed": true,
+  "errors": [],
+  "review_frames": [
+    "/workspace/gif-factory/research/xhs-storybook-v1/review/decoded/start-0000.png",
+    "/workspace/gif-factory/research/xhs-storybook-v1/review/decoded/middle-0012.png",
+    "/workspace/gif-factory/research/xhs-storybook-v1/review/decoded/end-0023.png"
+  ]
+}

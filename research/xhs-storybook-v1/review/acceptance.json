@@ -1,0 +1,59 @@
+{
+  "status": {
+    "TECHNICAL_PASS": "PASS",
+    "VISUAL_PASS": "BLOCKED",
+    "ACTION_PASS": "BLOCKED",
+    "AUDIO_PASS": "BLOCKED",
+    "EDITORIAL_PASS": "BLOCKED",
+    "PUBLISH_READY": "BLOCKED"
+  },
+  "objective": {
+    "resolution": [
+      1080,
+      1920
+    ],
+    "avg_fps": "6/1",
+    "decoded_frames": 24,
+    "duration_s": 4.0,
+    "audio_codec": "aac",
+    "audio_duration_s": 4.0,
+    "audio_start_s": 0.0,
+    "video_start_s": 0.0,
+    "audio_peak_dbfs": -11.0,
+    "audio_mean_dbfs": -24.0,
+    "decode_errors": ""
+  },
+  "sample_sha256": "4603765ce30f9a02c0e78e7bd782927a0ea6b4fe519e6a9833cd9f2aaba4c137",
+  "directors": {
+    "VISUAL_PASS": {
+      "decision": "BLOCKED",
+      "reviewer": "",
+      "evidence_sha256": "",
+      "reason": "Close-up pilot inspected by production agent; independent visual director and mobile UI check pending."
+    },
+    "ACTION_PASS": {
+      "decision": "BLOCKED",
+      "reviewer": "",
+      "evidence_sha256": "",
+      "reason": "Contact and stone/water state visibly improved; independent action director must review pose transitions in normal playback."
+    },
+    "AUDIO_PASS": {
+      "decision": "BLOCKED",
+      "reviewer": "",
+      "evidence_sha256": "",
+      "reason": "No two natural Chinese TTS auditions; no independent listening of music, Foley, and combined mix."
+    },
+    "EDITORIAL_PASS": {
+      "decision": "BLOCKED",
+      "reviewer": "",
+      "evidence_sha256": "",
+      "reason": "Story, cover, note copy, and rights ledger need editorial sign-off before publication."
+    }
+  },
+  "limitations": [
+    "No Chinese TTS voices were available; two natural 8–10 s auditions have not been made.",
+    "Music and Foley are original procedural stems; independent human listening has not occurred.",
+    "Visual and action director approval remain pending.",
+    "A pilot is not a completed publish package."
+  ]
+}
