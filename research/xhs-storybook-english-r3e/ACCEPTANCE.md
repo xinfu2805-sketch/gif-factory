@@ -40,6 +40,11 @@ WebP、水彩页、独立音乐与音效、官方 Kokoro 权重和本分支源�
   与 H.264 再编码一致；未发现角色或机位被重画。
 - 两段 R3E-A 试听 WAV 均保留。用户选用 `af_sol` 的 B 版本音色；
   本轮八段新句子及完整混音未获得人耳逐句确认。
+- 轻量 ZIP 在另一新目录 `/tmp/xhs-r3e-pack-verify.y2bCqm` 解压；包内 45 项
+  SHA-256 全部匹配。以 `build_from_voice.sh` 从包内 R2 画面、八页原画、
+  八段独立 WAV、音乐和音效离线重建，重新通过全片解码与全部技术检查；
+  新 MP4 SHA 仍为 `b8ae2445e5ca8df8649b593768a4774403fa8895a628cdfa7869eb076168ca27`，
+  与本轮正式交付字节一致。ZIP 中的最终 MP4 未被用作该重建的输入。
 
 机器细节见 `technical_report.json`、`illustration_preservation.json`、
 `eight_decoded_pages.jpg`、`seven_page_turns.jpg`、八段 `timeline.json` 和

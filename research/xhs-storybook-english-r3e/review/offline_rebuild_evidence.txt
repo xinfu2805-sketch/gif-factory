@@ -1,0 +1,13 @@
+2026-11-10 UTC
+Unpacked XHS_R3E_B_The_Thirsty_Crow_Workpack.zip into fresh directory:
+  /tmp/xhs-r3e-pack-verify.y2bCqm
+Verified all 45 pre-existing workpack files against SHA256SUMS: OK.
+Ran with the fresh R3E venv and bundled voice WAVs (no model weights, no existing final MP4 as input):
+  bash source/build_from_voice.sh input offline_rebuilt
+Rebuilt MP4 SHA-256:
+  b8ae2445e5ca8df8649b593768a4774403fa8895a628cdfa7869eb076168ca27
+Delivered MP4 SHA-256:
+  b8ae2445e5ca8df8649b593768a4774403fa8895a628cdfa7869eb076168ca27
+verify_delivery.py result: all 11 objective checks true, including full audio/video decode,
+33.3 s, 1080x1920, 799 frames, AAC nonblank, eight nonblank voice clips and stems.
+This does not assert artistic, action, copyright or publish quality.
