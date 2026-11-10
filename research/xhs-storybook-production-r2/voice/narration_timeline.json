@@ -1,0 +1,63 @@
+{
+  "video_length_seconds": 33.3,
+  "video_file": "bedtime_video_720p.mp4",
+  "voice_segments": [
+    {
+      "page": 0,
+      "start": 0.25,
+      "end": 2.65,
+      "max_length": 2.4,
+      "text": "乌鸦喝水。故事开始啦。"
+    },
+    {
+      "page": 1,
+      "start": 3.05,
+      "end": 6.95,
+      "max_length": 3.9,
+      "text": "天气好热，小乌鸦口渴了。"
+    },
+    {
+      "page": 2,
+      "start": 7.35,
+      "end": 11.25,
+      "max_length": 3.9,
+      "text": "咦？这里有一瓶水！"
+    },
+    {
+      "page": 3,
+      "start": 11.65,
+      "end": 15.55,
+      "max_length": 3.9,
+      "text": "可是水太低，它怎么也喝不到。"
+    },
+    {
+      "page": 4,
+      "start": 15.95,
+      "end": 19.85,
+      "max_length": 3.9,
+      "text": "忽然，它发现地上的小石子。"
+    },
+    {
+      "page": 5,
+      "start": 20.25,
+      "end": 25.05,
+      "max_length": 4.8,
+      "text": "一颗，两颗，扑通！石子落进水里。"
+    },
+    {
+      "page": 6,
+      "start": 25.45,
+      "end": 29.35,
+      "max_length": 3.9,
+      "text": "水慢慢升高，小乌鸦终于喝到啦！"
+    },
+    {
+      "page": 7,
+      "start": 29.75,
+      "end": 33.15,
+      "max_length": 3.4,
+      "text": "遇到困难，动动脑筋。晚安。"
+    }
+  ],
+  "art_direction": "温柔自然睡前故事，不装嫩、不夸张、不机器播报，逐句停顿，轻声收尾"
+}

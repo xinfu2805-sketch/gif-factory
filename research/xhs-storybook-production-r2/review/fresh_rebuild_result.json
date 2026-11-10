@@ -1,0 +1,15 @@
+{
+  "scope": "fresh render using eight approved illustrations + separately stored music/fx mix; not copied from the pre-existing mp4",
+  "output": "reproduced/bedtime_rebuilt_1080p_no_voice.mp4",
+  "duration_s": 33.3,
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "sha256": "7e126011d097b39c69e0f272b0332d4ed83d776c0d598bb0c28b8b32147e60e8",
+  "technical_pass": true,
+  "VOICE_PASS": "BLOCKED",
+  "PUBLISH_READY": "BLOCKED"
+}
