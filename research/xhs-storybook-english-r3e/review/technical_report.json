@@ -1,0 +1,144 @@
+{
+  "technical_checks": {
+    "video_1080x1920": true,
+    "encoded_24fps_from_R2_12fps_picture": true,
+    "799_frames": true,
+    "duration_33_3s": true,
+    "aac_48k_stereo": true,
+    "full_video_and_audio_decode": true,
+    "final_aac_nonblank": true,
+    "8_voice_lines": true,
+    "no_voice_crosses_page_turn": true,
+    "voice_clips_nonblank": true,
+    "all_stems_33_3s_and_nonblank": true
+  },
+  "video_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "width": 1080,
+        "height": 1920,
+        "r_frame_rate": "24/1",
+        "nb_frames": "799"
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0",
+        "nb_frames": "1562"
+      }
+    ],
+    "format": {
+      "duration": "33.300000",
+      "size": "7934098"
+    }
+  },
+  "final_aac_rms": 0.04756608605384827,
+  "video_sha256": "b8ae2445e5ca8df8649b593768a4774403fa8895a628cdfa7869eb076168ca27",
+  "voice_clips": {
+    "page_00_af_sol.wav": {
+      "duration_s": 1.084,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "rms": 0.070135,
+      "peak": 0.505859,
+      "sha256": "0ac775966eb2c8bc3ba4c26e63464ee9968c34aba8d8200690e87acb2f12d969"
+    },
+    "page_01_af_sol.wav": {
+      "duration_s": 2.432,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "rms": 0.072533,
+      "peak": 0.490509,
+      "sha256": "cf20071346c08934ecb53bfb034d8f35491d1ceef402c57ff305dcbc2696e593"
+    },
+    "page_02_af_sol.wav": {
+      "duration_s": 1.369,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "rms": 0.071596,
+      "peak": 0.508423,
+      "sha256": "055739755fabf2a0d160604ccf10ef2af30de5811c82767cd85afe8f416e0ad0"
+    },
+    "page_03_af_sol.wav": {
+      "duration_s": 1.83,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "rms": 0.07024,
+      "peak": 0.46933,
+      "sha256": "02598b1ff5a1dec043391400460107da299672068fcb734eeaafb1ee5634e098"
+    },
+    "page_04_af_sol.wav": {
+      "duration_s": 2.063,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "rms": 0.073832,
+      "peak": 0.553406,
+      "sha256": "a8a1001a7a7a7d42a3644369e4b85564f2c4d93a821fa1fcf7b24deff67c05e2"
+    },
+    "page_05_af_sol.wav": {
+      "duration_s": 1.906,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "rms": 0.0745,
+      "peak": 0.398071,
+      "sha256": "2a2fe902c5a67f77af6f6497f2b8dcaa5a1e6b2a640c6b8a600d7ca1b0141064"
+    },
+    "page_06_af_sol.wav": {
+      "duration_s": 1.811,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "rms": 0.072143,
+      "peak": 0.371765,
+      "sha256": "4acc4552d847eafe51b7c838516deb6d964af3533845cd000cbc3ab903a630af"
+    },
+    "page_07_af_sol.wav": {
+      "duration_s": 2.833,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "rms": 0.068265,
+      "peak": 0.485382,
+      "sha256": "ff2f8ff9c669debd581fc083cb797e7864baeb681f2ec4d63aa473937629fc7f"
+    }
+  },
+  "audio_stems": {
+    "narration_aligned.wav": {
+      "duration_s": 33.3,
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "rms": 0.042569,
+      "peak": 0.486572,
+      "sha256": "740341d7e0b53f7fb7cc093bf6ebe04692418d67d07097307a9be65b45141a73"
+    },
+    "lullaby_ducked.wav": {
+      "duration_s": 33.3,
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "rms": 0.021302,
+      "peak": 0.167145,
+      "sha256": "34ac87d4e7ea5474ece905c9387619d61ec33a7923255399fcc3b1e81f430038"
+    },
+    "foley_separate.wav": {
+      "duration_s": 33.3,
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "rms": 0.002581,
+      "peak": 0.050079,
+      "sha256": "f40dd771824304d5529626313e4b440f8456637688d0a78a1f867f3392611e1f"
+    },
+    "final_mix.wav": {
+      "duration_s": 33.3,
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "rms": 0.047653,
+      "peak": 0.498291,
+      "sha256": "253b7a09e10d191ab54dd86143d6c469987f20ede3b67490bd528aca22cf1ba6"
+    }
+  },
+  "note": "Decoding and signal checks cannot certify pronunciation, acting, music quality, rights, or crow joint animation."
+}
