@@ -1,0 +1,169 @@
+{
+  "branch": "research/xhs-storybook-waiting-moon-r4",
+  "pilot": {
+    "path": "research/xhs-storybook-waiting-moon-r4/review/page_06_pilot.mp4",
+    "sha256": "08c5f98a2a3f5fdd4d66f41d75e7905d2c5297fe16c1a78f6968a61661ac24ea",
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1080,
+          "height": 1920,
+          "r_frame_rate": "6/1",
+          "nb_read_frames": "25"
+        }
+      ],
+      "format": {
+        "duration": "4.166667"
+      }
+    },
+    "full_decode_ok": true
+  },
+  "artwork": [
+    {
+      "page": 0,
+      "sha256": "76a6c4c12f47a5d44a657be1ce0cfc35357202c5ce1655b7b7d39cc51e0ec12f",
+      "dimensions": [
+        941,
+        1672
+      ]
+    },
+    {
+      "page": 1,
+      "sha256": "6448211408b7c616b36f2035c06c1dd66bf3ea66248b757396ba0a463f0a0b3e",
+      "dimensions": [
+        1055,
+        1491
+      ]
+    },
+    {
+      "page": 2,
+      "sha256": "6ce241fe060685f45eb1687e9018cb079a8b32897c8c76ba05eabaac20ba32e4",
+      "dimensions": [
+        941,
+        1672
+      ]
+    },
+    {
+      "page": 3,
+      "sha256": "24f625c1a550d99eca9a160c2635fa172f612d16fc8f99ab524582dafa922b65",
+      "dimensions": [
+        992,
+        1586
+      ]
+    },
+    {
+      "page": 4,
+      "sha256": "7ce30a00a85ddb7f6174dd52afa46febf7621768a2f8a50f4e323aecea7f7486",
+      "dimensions": [
+        992,
+        1586
+      ]
+    },
+    {
+      "page": 5,
+      "sha256": "5d1355e7a4e6fa7b939d6da862cedc86c52a4ac89b921b5c8d3d38eaf3e57d05",
+      "dimensions": [
+        992,
+        1586
+      ]
+    },
+    {
+      "page": 6,
+      "sha256": "ef7b4a69f54873e8bd9b13dffec5c495566e8222a9a1688e397c47bf695310d1",
+      "dimensions": [
+        941,
+        1672
+      ]
+    },
+    {
+      "page": 7,
+      "sha256": "98a5d8ea7bfe886507be72b9c690f95653313124a796b63effbf36902c52c52f",
+      "dimensions": [
+        992,
+        1586
+      ]
+    }
+  ],
+  "voice_auditions": {
+    "beginning": {
+      "path": "research/xhs-storybook-waiting-moon-r4/voice/audition_beginning.wav",
+      "sha256": "20e433e7afd30a3c3c4418ff93f48e7eeefe7d7e1e92af9c8b51c09470503c26",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "pcm_s16le",
+            "sample_rate": "24000",
+            "channels": 1,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "8.849125"
+        }
+      }
+    },
+    "ending": {
+      "path": "research/xhs-storybook-waiting-moon-r4/voice/audition_ending.wav",
+      "sha256": "9e2de2878b8d2e37de946e641f781ea068a3f82fa5c9f998f52efc8532af3cdd",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "pcm_s16le",
+            "sample_rate": "24000",
+            "channels": 1,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "9.891292"
+        }
+      }
+    }
+  },
+  "music_provisional": {
+    "path": "research/xhs-storybook-production-r2/audio/lullaby_original_33s.opus",
+    "sha256": "64799566ad82eabd8340a4be7cde3f655e0c6a7ab77ea54e8865facb89b0e495",
+    "rights": "TimGM6mb GPL-2 source retained; Xiaohongshu distribution unresolved"
+  },
+  "audio_mix_preview": {
+    "duration_s": 33.333333333333336,
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "music_source": "research/xhs-storybook-production-r2/audio/lullaby_original_33s.opus",
+    "foley_source": "/workspace/gif-factory-output/xhs-storybook-r4/foley.wav",
+    "music_gain_during_voice_target": 0.25,
+    "music_gain_between_voice_target": 0.7,
+    "pre_limiter_peak": 0.47148475006776486,
+    "limiter_gain": 1.0,
+    "stems": {
+      "narration_aligned.wav": {
+        "rms": 0.045841243118047714,
+        "peak": 0.47026437520980835,
+        "sha256": "7f67d8d5ed6958fa9509383399fdf45a775780330c281ea4e8f8f0b11f419e55"
+      },
+      "lullaby_ducked.wav": {
+        "rms": 0.01572109989936025,
+        "peak": 0.14337572125640358,
+        "sha256": "ece01bdb874c4da7edcd497372fb9094d5ac12c5e51cd2fd8343578f7b01c781"
+      },
+      "foley_separate.wav": {
+        "rms": 0.002301533706486225,
+        "peak": 0.01190185546875,
+        "sha256": "c24ee2a4c04d38fd0543f22f14cab8c9bd52961d43356338ca84f84bf19365d6"
+      },
+      "mix.wav": {
+        "rms": 0.04851040167735885,
+        "peak": 0.47148475006776486,
+        "sha256": "d48e99522b14270682160e46abbb2af31656d6779b10471cac09defbffdfc00c"
+      }
+    }
+  },
+  "caveat": "No human ear review or eight-page MP4; no full TECHNICAL_PASS, AUDIO_PASS, COPYRIGHT_PASS or PUBLISH_READY."
+}
