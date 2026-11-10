@@ -1,0 +1,34 @@
+[
+  {
+    "frame": 36,
+    "upper_illustration_mae_8bit": 1.533
+  },
+  {
+    "frame": 112,
+    "upper_illustration_mae_8bit": 1.53
+  },
+  {
+    "frame": 216,
+    "upper_illustration_mae_8bit": 1.564
+  },
+  {
+    "frame": 312,
+    "upper_illustration_mae_8bit": 1.551
+  },
+  {
+    "frame": 420,
+    "upper_illustration_mae_8bit": 1.557
+  },
+  {
+    "frame": 540,
+    "upper_illustration_mae_8bit": 1.387
+  },
+  {
+    "frame": 648,
+    "upper_illustration_mae_8bit": 1.538
+  },
+  {
+    "frame": 744,
+    "upper_illustration_mae_8bit": 1.577
+  }
+]
