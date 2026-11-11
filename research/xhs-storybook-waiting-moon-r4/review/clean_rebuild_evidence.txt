@@ -1,0 +1,22 @@
+R4 source-only clean rebuild evidence, 2026-11-11 UTC
+
+Input archive: Waiting_for_the_Moon_R4_FULL_workpack.zip
+Extraction target: /workspace/gif-factory-output/xhs-storybook-r4/clean_rebuild/
+Selected inputs: artwork/, source/, voice/, original R2 music Opus, timeline.json,
+requirements-build.txt. No MP4 was extracted (confirmed zero *.mp4 files).
+
+The build command ran in this isolated extraction, with the existing
+sherpa test virtualenv placed on PATH for Pillow, NumPy and OpenCV:
+
+PATH=/workspace/gif-factory-output/xhs-storybook-r3a/.venv/bin:$PATH bash \
+  clean_rebuild/Waiting_for_the_Moon_R4/source/build_full.sh \
+  clean_rebuild/Waiting_for_the_Moon_R4/audio/lullaby_original_33s.opus \
+  clean_rebuild_output
+
+Result: 200 newly rendered 1080x1920 frames at 6 fps; 33.333-second H.264/AAC
+MP4 fully decoded. Fresh narration/music/foley mix and new AAC mux were made.
+Original MP4 SHA-256: 373581ad598c588e200ef511d44cf77116ce0c10adae07fd09a6858c3ff68bea
+Rebuilt  MP4 SHA-256: 373581ad598c588e200ef511d44cf77116ce0c10adae07fd09a6858c3ff68bea
+
+This reproducibility check is technical. It does not settle subjective
+voice, final mix, visual, editorial or Xiaohongshu music-rights review.

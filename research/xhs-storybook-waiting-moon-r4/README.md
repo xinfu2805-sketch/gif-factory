@@ -7,18 +7,21 @@ in `artwork/`. The source files generate the voice, timeline, local light
 motion, original sound effects, and separate audio mix. The renderer never
 uses an older story video as input.
 
-## Current review point
+## Current deliverable
 
 The eight new watercolor pages, bilingual caption stills, cover, and a
-4.17-second page-06 motion pilot are complete. Two unprocessed English
-`af_sol` auditions are in `voice/`. A human has **not** yet approved the new
-sentences or the picture pages. Therefore the 8-page video is deliberately
-not rendered. See `ACCEPTANCE.md` before interpreting any test result.
+4.17-second page-06 motion pilot are complete. The user described the two
+unprocessed English `af_sol` auditions as “不错”; the same voice was then
+used for the 33.333-second eight-page video. The full MP4, separate stems,
+and SHA-256 manifest are in the downloadable release package. The voice
+choice is accepted for this render, while final mix listening, image quality,
+and music rights still need review. See `ACCEPTANCE.md`.
 
 ## Rebuild inputs and commands
 
-Requires Python 3 with Pillow, NumPy and `sherpa-onnx==2.0.1`, FFmpeg, Noto
-Serif and Noto Serif CJK fonts. For offline voice regeneration also provide
+Requires Python 3 with `requirements-build.txt`, FFmpeg, Noto Serif and
+Noto Serif CJK fonts. For offline voice regeneration, also install
+`sherpa-onnx==2.0.1` and provide
 the official `kokoro-multi-lang-v1_1` sherpa-onnx package (`model.onnx`,
 `voices.bin`, `tokens.txt`, `lexicon-us-en.txt`). This 300+ MB model is not in
 the lightweight work package. The generated 24 kHz PCM voice clips are
@@ -26,20 +29,17 @@ included. `generate_voice.py` writes its one extra pronunciation to a local
 lexicon without changing the official cached model.
 
 From this directory, after sourcing the R2 lullaby stem and reviewing its
-rights status:
+rights status, the full offline-from-voice build is:
 
 ```sh
-python3 source/build_timeline.py
-python3 source/make_foley.py --output /tmp/moon-foley.wav
-python3 source/mix_audio.py --music /path/to/lullaby_original_33s.opus \
-  --foley /tmp/moon-foley.wav --output-dir /tmp/moon-audio
-python3 source/render_story.py --pilot-page 6 --output /tmp/moon-pilot.mp4
+./source/build_full.sh /path/to/lullaby_original_33s.opus /tmp/moon-output
 ```
 
-The full renderer is held for the voice and visual review. Once those are
-accepted, `python3 source/render_story.py --output /tmp/moon-picture.mp4`
-will produce a new 200-frame, true-6fps picture track. Mux with the freshly
-created mix as AAC without changing the frame rate. Recheck every output.
+This builds a new 200-frame, true-6fps picture track from the eight PNG pages,
+generates original soft effects, aligns the independent voice/music/effects
+tracks, muxes AAC, and runs objective media verification. It never copies
+an older story MP4. The package includes the eight approved-voice source
+clips for fully offline rebuild; no model download is needed for that route.
 
 The R2 lullaby is retained as a **provisional research stem** because the
 original soundfont's Xiaohongshu distribution clearance remains unresolved.

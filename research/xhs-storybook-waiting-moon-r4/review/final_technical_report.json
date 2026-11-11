@@ -1,0 +1,44 @@
+{
+  "result": "OBJECTIVE_TECHNICAL_PASS",
+  "video": "/workspace/gif-factory-output/xhs-storybook-r4/Waiting_for_the_Moon_R4.mp4",
+  "sha256": "373581ad598c588e200ef511d44cf77116ce0c10adae07fd09a6858c3ff68bea",
+  "ffprobe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1080,
+        "height": 1920,
+        "r_frame_rate": "6/1",
+        "duration": "33.333333",
+        "nb_read_frames": "200"
+      },
+      {
+        "codec_name": "aac",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0",
+        "duration": "33.333000",
+        "nb_read_frames": "1563"
+      }
+    ],
+    "format": {
+      "duration": "33.333333",
+      "size": "8728547"
+    }
+  },
+  "full_video_audio_decode": "PASS",
+  "decoded_audio_rms": 0.048362914472818375,
+  "decoded_audio_peak": 0.47176235914230347,
+  "adjacent_page_midframe_mae": [
+    33.75951903292181,
+    36.14633230452675,
+    33.72172582304527,
+    19.42725051440329,
+    28.97028549382716,
+    29.293539094650207,
+    17.832965534979422
+  ],
+  "caveat": "Media checks do not certify picture aesthetics, narration acting, music quality, lyric pronunciation or distribution rights."
+}

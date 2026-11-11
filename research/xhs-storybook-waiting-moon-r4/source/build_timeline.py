@@ -4,7 +4,7 @@ import hashlib
 import json
 from pathlib import Path
 
-from generate_voice import LINES
+from story import LINES
 
 ROOT=Path(__file__).resolve().parent.parent
 FPS=6
