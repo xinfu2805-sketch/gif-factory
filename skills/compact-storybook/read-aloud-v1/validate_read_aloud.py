@@ -102,9 +102,37 @@ def review_errors(review, root, contract=None):
         if stage_status.get("VOICE_REVIEW") != "PASS":
             errors.append("TIMELINE cannot PASS before VOICE_REVIEW")
         pages = timeline.get("pages")
+        story_path = evidence_file({"path": "story.json", "sha256": timeline.get("story_sha256"),
+                                    "observation": "Frozen story source used to map every timeline page"},
+                                   "timeline.story")
+        story_pages = []
+        if story_path:
+            try:
+                story_pages = json.loads(story_path.read_text())["pages"]
+                if not isinstance(story_pages, list) or not story_pages:
+                    raise ValueError("pages must be a nonempty list")
+                if [page.get("page") for page in story_pages] != list(range(len(story_pages))):
+                    errors.append("story.json page numbers must be unique and ordered from 0")
+            except (json.JSONDecodeError, KeyError, TypeError, ValueError, AttributeError) as exc:
+                errors.append(f"timeline.story: invalid story.json pages: {exc}")
+                story_pages = []
         if not isinstance(pages, list) or not pages:
             errors.append("TIMELINE PASS requires measured narration pages")
         else:
+            if story_pages:
+                if len(pages) != len(story_pages):
+                    errors.append("timeline page count differs from story.json")
+                timeline_numbers = [page.get("page") if isinstance(page, dict) else None for page in pages]
+                story_numbers = [page["page"] for page in story_pages]
+                if any(not isinstance(number, int) or isinstance(number, bool) for number in timeline_numbers):
+                    errors.append("timeline page numbers must be integers")
+                elif len(set(timeline_numbers)) != len(timeline_numbers):
+                    errors.append("timeline has duplicate page numbers")
+                if timeline_numbers != story_numbers:
+                    errors.append("timeline page numbers or order differ from story.json")
+                for i, (timeline_page, story_page) in enumerate(zip(pages, story_pages)):
+                    if isinstance(timeline_page, dict) and timeline_page.get("role") != story_page.get("role"):
+                        errors.append(f"timeline.pages[{i}]: role differs from story.json")
             total = 0.0
             story_pages = 0
             for i, page in enumerate(pages):

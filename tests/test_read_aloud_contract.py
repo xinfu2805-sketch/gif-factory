@@ -75,8 +75,12 @@ class ReadAloudContractTest(unittest.TestCase):
                 if self.contract["stages"][i]["human_review"]:
                     stage["reviewer"] = {"type": "human", "name": "Named reviewer"}
             self.review["stages"][3]["evidence"] = [wav_evidence, second_wav, license_evidence]
-            self.review["timeline"] = {"basis": "approved_narration_audio", "pages": [{
-                "role": "story",
+            story_source = base / "story.json"
+            story_source.write_text(json.dumps({"pages": [{"page": 0, "role": "story"}]}))
+            story_sha = hashlib.sha256(story_source.read_bytes()).hexdigest()
+            self.review["timeline"] = {"basis": "approved_narration_audio", "story_sha256": story_sha,
+                                       "pages": [{
+                "page": 0, "role": "story",
                 "audio_approved": True, "audio_path": "one.wav", "audio_sha256": wav_evidence["sha256"],
                 "voice_review": {"status": "PASS", "approved_audio_sha256": wav_evidence["sha256"],
                                  "evidence": [evidence("voice_approved.txt", kind="voice_approval")],
@@ -112,18 +116,23 @@ class ReadAloudContractTest(unittest.TestCase):
             self.review["stages"][3]["evidence"] = [
                 evidence("first.wav", "audition", wav_bytes), evidence("second.wav", "audition", wav_bytes),
                 evidence("license.txt", "license")]
-            cover = {"role": "cover", "display_duration_s": 2.4, "turn_s": .5,
+            story_source = base / "story.json"
+            story_source.write_text(json.dumps({"pages": [{"page": 0, "role": "cover"},
+                                                          {"page": 1, "role": "story"}]}))
+            story_sha = hashlib.sha256(story_source.read_bytes()).hexdigest()
+            cover = {"page": 0, "role": "cover", "display_duration_s": 2.4, "turn_s": .5,
                      "cover_review": {"status": "PASS", "approved_display_duration_s": 2.4,
                                       "approved_turn_s": .5,
                                       "evidence": [evidence("cover-timing.txt", "timing_approval")],
                                       "reviewer": {"type": "human", "name": "Named reviewer"}}}
-            story = {"role": "story", "audio_approved": True, "audio_path": "story.wav",
+            story = {"page": 1, "role": "story", "audio_approved": True, "audio_path": "story.wav",
                      "audio_sha256": wav_sha, "voice_duration_s": 1.0, "lead_s": .2,
                      "comprehension_hold_s": .8, "page_duration_s": 2.0, "turn_s": 0.0,
                      "voice_review": {"status": "PASS", "approved_audio_sha256": wav_sha,
                                       "evidence": [evidence("story-voice.txt", "voice_approval")],
                                       "reviewer": {"type": "human", "name": "Named reviewer"}}}
-            self.review["timeline"] = {"basis": "approved_narration_audio", "pages": [cover, story],
+            self.review["timeline"] = {"basis": "approved_narration_audio", "story_sha256": story_sha,
+                                       "pages": [cover, story],
                                        "total_duration_s": 4.9}
             self.assertEqual(review_errors(self.review, base, self.contract), [])
 
@@ -146,6 +155,37 @@ class ReadAloudContractTest(unittest.TestCase):
             false_cover = copy.deepcopy(self.review)
             false_cover["timeline"]["pages"][1] = copy.deepcopy(cover)
             self.assertTrue(any("silent cover must be page 0" in x for x in review_errors(false_cover, base, self.contract)))
+
+    def _mapping_errors(self, page_specs):
+        with tempfile.TemporaryDirectory() as temp:
+            base = Path(temp)
+            story = {"pages": [{"page": 0, "role": "cover"}, {"page": 1, "role": "story"},
+                               {"page": 2, "role": "story"}]}
+            source = base / "story.json"
+            source.write_text(json.dumps(story))
+            review = copy.deepcopy(self.review)
+            review["stages"][4]["status"] = "PASS"
+            review["timeline"] = {"basis": "approved_narration_audio",
+                                  "story_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
+                                  "pages": [{"page": number, "role": role} for number, role in page_specs],
+                                  "total_duration_s": 0.0}
+            return review_errors(review, base, self.contract)
+
+    def test_missing_story_page_blocks_timeline(self):
+        errors = self._mapping_errors([(0, "cover"), (2, "story")])
+        self.assertTrue(any("page count differs from story.json" in x for x in errors))
+
+    def test_duplicate_story_page_blocks_timeline(self):
+        errors = self._mapping_errors([(0, "cover"), (1, "story"), (1, "story")])
+        self.assertTrue(any("duplicate page numbers" in x for x in errors))
+
+    def test_reordered_story_pages_block_timeline(self):
+        errors = self._mapping_errors([(0, "cover"), (2, "story"), (1, "story")])
+        self.assertTrue(any("order differ from story.json" in x for x in errors))
+
+    def test_page_role_mismatch_blocks_timeline(self):
+        errors = self._mapping_errors([(0, "cover"), (1, "cover"), (2, "story")])
+        self.assertTrue(any("role differs from story.json" in x for x in errors))
 
     def test_story_page_without_narration_is_blocked(self):
         review = copy.deepcopy(self.review)

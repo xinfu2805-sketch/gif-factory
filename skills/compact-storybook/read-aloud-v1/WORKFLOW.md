@@ -80,6 +80,10 @@ that WAV's SHA-256. The total
 is the sum of page display times and turns; there is no fixed target duration.
 The validator rejects a silent body page or an unreviewed cover. A cover
 exception does not waive the `VOICE_REVIEW` gate for the narrated story.
+Before `TIMELINE=PASS`, its `story_sha256` must match the project's
+`story.json`. The timeline must contain every story page exactly once, in the
+same order, with identical page numbers and `cover`/`story` roles. An omitted,
+repeated or reordered page blocks the timeline even if its audio files exist.
 
 Copy [acceptance_template.json](acceptance_template.json) into a project and
 run `python3 skills/compact-storybook/read-aloud-v1/validate_read_aloud.py

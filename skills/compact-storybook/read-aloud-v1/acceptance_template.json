@@ -14,7 +14,7 @@
     {"id": "RIGHTS_TECH", "status": "BLOCKED", "evidence": [], "reviewer": null},
     {"id": "EXPORT", "status": "BLOCKED", "evidence": [], "reviewer": null}
   ],
-  "timeline": {"basis": "approved_narration_audio", "pages": [], "total_duration_s": null},
+  "timeline": {"basis": "approved_narration_audio", "story_sha256": null, "pages": [], "total_duration_s": null},
   "read_aloud_checks": {
     "STORY_COMPLETE": {"status": "BLOCKED", "evidence": [], "reviewer": null},
     "CHILD_COMPREHENSION": {"status": "BLOCKED", "evidence": [], "reviewer": null},

@@ -6,6 +6,7 @@
   "timeline_page_roles": ["cover", "story"],
   "silent_cover_policy": "only page 0; named human timing approval for display_duration_s and turn_s; no narration fields",
   "story_page_policy": "real WAV, SHA-256, measured voice_duration_s and page-specific human voice approval required",
+  "timeline_story_binding": "story.json SHA-256; identical page count, ordered unique page numbers and matching page roles",
   "stages": [
     {"id": "STORY", "owner": "Story Expert", "human_review": false},
     {"id": "STORY_REVIEW", "owner": "Story Expert + Quality Director", "human_review": true},

@@ -23,7 +23,32 @@
     {
       "id": "VOICE_REVIEW",
       "status": "BLOCKED",
-      "evidence": [],
+      "evidence": [
+        {
+          "path": "voice/page_03_af_sol_audition.wav",
+          "kind": "audition",
+          "sha256": "e09e85f45306b842ae0e2bbd22005a3b1a8704d2137438670d814d5cbd89f011",
+          "observation": "Unprocessed page 03 WAV ready for human listening"
+        },
+        {
+          "path": "voice/page_07_af_sol_audition.wav",
+          "kind": "audition",
+          "sha256": "2eec697d827884f02d343bb3280a2164dd4d5fbe94b91c07e38fd3c614f7df7e",
+          "observation": "Unprocessed page 07 WAV ready for human listening"
+        },
+        {
+          "path": "voice/KOKORO_LICENSE_APACHE_2.txt",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "observation": "Official cached Kokoro Apache 2.0 license text"
+        },
+        {
+          "path": "voice/verification.json",
+          "kind": "signal_check",
+          "sha256": "fcd308a693e5d035116996f789f377157a54d543e09666407a7ec027da741785",
+          "observation": "Measured file duration, signal levels and full decode"
+        }
+      ],
       "reviewer": null
     },
     {
@@ -72,7 +97,8 @@
   "timeline": {
     "basis": "approved_narration_audio",
     "pages": [],
-    "total_duration_s": null
+    "total_duration_s": null,
+    "story_sha256": null
   },
   "read_aloud_checks": {
     "STORY_COMPLETE": {

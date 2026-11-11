@@ -1,6 +1,7 @@
 # GIF Factory｜current read-aloud workflow status
 
-**Version:** XHS-READ-ALOUD-V1 REVIEW FIX, 2026-11-11 UTC. **Authority:**
+**Version:** XHS-READ-ALOUD-V1, timeline-integrity and voice-audition update,
+2026-11-11 UTC. **Authority:**
 `xinfu2805-sketch/gif-factory`. Resolve the latest branch HEAD from GitHub
 when a new task starts; historical SHA values below are this recovery's
 observations, not permanent aliases for `main`.
@@ -25,10 +26,11 @@ Evidence source: `git ls-remote origin refs/heads/main refs/heads/research/xhs-s
   machine-readable [contract](skills/compact-storybook/read-aloud-v1/workflow_contract.json),
   [acceptance template](skills/compact-storybook/read-aloud-v1/acceptance_template.json)
   and [validator](skills/compact-storybook/read-aloud-v1/validate_read_aloud.py).
-- `python3 -m unittest discover -s tests -v`: **19/19 passed**, including
-  eleven read-aloud contract tests. They cover ordered stages, measured WAV
+- `python3 -m unittest discover -s tests -v`: **23/23 passed**, including
+  fifteen read-aloud contract tests. They cover ordered stages, measured WAV
   timing, human-only gates, source-backed evidence, a reviewed silent cover,
-  rejection of a body page without narration, document links and the pilot.
+  rejection of a body page without narration, and missing, duplicate,
+  reordered or role-mismatched pages against the hashed `story.json`.
 - Wrote a new [Waiting for the Moon story and read-aloud draft](research/xhs-read-aloud-v1/waiting-for-the-moon/STORY_AND_READING.md)
   with expectation → absence → sadness → star companionship → moon → sleep.
   Review-fix pages 02, 03 and 06 match the requested English wording and
@@ -37,6 +39,14 @@ Evidence source: `git ls-remote origin refs/heads/main refs/heads/research/xhs-s
   The silent cover is a reviewed timeline exception, while every narrated
   story page still needs a real WAV, file hash, measured duration and
   page-specific human voice approval.
+- Two new raw Kokoro `af_sol` auditions exist: [page 03 loneliness](research/xhs-read-aloud-v1/waiting-for-the-moon/voice/page_03_af_sol_audition.wav)
+  (4.983042 s) and [page 07 comforting ending](research/xhs-read-aloud-v1/waiting-for-the-moon/voice/page_07_af_sol_audition.wav)
+  (4.922875 s), both 24 kHz mono PCM. The cached official v1.1 model, Apache-2.0
+  text, task-local lexicon patch, exact SHA-256 values and objective checks
+  are documented in [audition review](research/xhs-read-aloud-v1/waiting-for-the-moon/voice/AUDITION_REVIEW.md).
+  The first quote-tokenization warning was corrected; final synthesis logged
+  no skipped-word warnings. The [lightweight ZIP](research/xhs-read-aloud-v1/waiting-for-the-moon/delivery/Waiting_for_the_Moon_read_aloud_auditions.zip)
+  contains only these two clips and review/source evidence, not model weights.
   This draft supersedes the old rabbit project's fixed 33.333-second
   scheduling for future read-aloud production; it does not change or erase
   that research video.
@@ -46,24 +56,23 @@ Evidence source: `git ls-remote origin refs/heads/main refs/heads/research/xhs-s
 
 ## Open blockers and next executable task
 
-The new rabbit story text has **not** received actual human editorial or
-child-comprehension review: `STORY_REVIEW=BLOCKED`. New narration has not been
-generated, measured, auditioned or heard. No new page durations, art,
-animation or complete video have been
-created for this V1 pilot. The eight human read-aloud criteria, all release
+The new rabbit story text has **not** received formal human editorial or
+child-comprehension signoff: `STORY_REVIEW=BLOCKED`. The two audition WAVs
+have been technically measured but **not heard or accepted by the user**:
+`VOICE_REVIEW=BLOCKED`. The five other story pages have no recorded narration.
+No approved full-story page durations, art, animation or complete video have
+been created for this V1 pilot. The eight human read-aloud criteria, all release
 gates and `PUBLISH_READY` are **BLOCKED** in the pilot's
 [machine-readable review](research/xhs-read-aloud-v1/waiting-for-the-moon/acceptance.json).
 The earlier R2 TimGM6mb lullaby still lacks verified Xiaohongshu distribution
 clearance; do not carry its existence into `COPYRIGHT_PASS`.
 
-**Next task:** have Story Expert and Read-Aloud Director review the 99-word
-draft against target-age comprehension. Then first try R3E's verified Kokoro
-`af_sol` route for two raw English WAV auditions: page 03's lonely moment and
-page 07's comforting ending. Keep natural speed, model/voice/version/license
-provenance, SHA-256 and complete measured durations; submit both to the user
-for listening approval. Only after approval should the Storyboard Director
-derive page and turn seconds. Do not reuse the R4 33.333-second timeline or
-batch-render a film now.
+**Next task:** ask the user to listen to the page 03 and 07 raw WAVs for
+pronunciation, restrained sadness, warmth and a natural final cadence.
+Record the verdict; if accepted, complete formal story review and record the
+remaining page narrations at natural speed. Only after each page has approved
+WAV evidence should the Storyboard Director derive the full page and turn
+timings. Do not reuse the R4 33.333-second timeline or batch-render a film now.
 
 The new work is in Draft PR #5 against `main`. Keep PR #3, #4 and #5 draft;
 do not merge any of them automatically. Use the remote branch ref for the
