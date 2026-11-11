@@ -81,7 +81,10 @@ is the sum of page display times and turns; there is no fixed target duration.
 The validator rejects a silent body page or an unreviewed cover. A cover
 exception does not waive the `VOICE_REVIEW` gate for the narrated story.
 Before `TIMELINE=PASS`, its `story_sha256` must match the project's
-`story.json`. The timeline must contain every story page exactly once, in the
+`story.json`. For externally recorded or synthesized narration, first use the
+[external WAV import contract](VOICE_IMPORT.md) to bind source rights, hashes,
+exact frozen page text and measured audio. Import does not sign voice or rights
+reviews. The timeline must contain every story page exactly once, in the
 same order, with identical page numbers and `cover`/`story` roles. An omitted,
 repeated or reordered page blocks the timeline even if its audio files exist.
 

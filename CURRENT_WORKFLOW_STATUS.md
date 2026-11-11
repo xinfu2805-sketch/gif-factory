@@ -84,6 +84,25 @@ frozen text; submit the real WAVs for user listening. Only after approval should
 the Storyboard Director derive timings. Do not reuse the fixed 33.333-second
 timeline or batch-render a film now.
 
+**VOICE-SOURCE-INTEGRATION-R1 update (2026-11-11):** Added the
+[external WAV intake contract](skills/compact-storybook/read-aloud-v1/VOICE_IMPORT.md)
+and [verifier/importer](skills/compact-storybook/read-aloud-v1/import_external_voice.py).
+It binds any supplied page clip to the unchanged 99-word `story.json`, checks
+real PCM WAV decode, SHA-256, sample rate, measured duration and a nonblank
+signal, and separates private audition permission from Xiaohongshu publication
+permission. A named human must attest to every spoken sentence, full ending and
+natural pace; that is still separate from the user's artistic voice approval.
+No external qualified WAV was supplied in this task, so the importer has only
+temporary synthetic **test fixtures** and there is no new audition audio or
+timeline. `VOICE_REVIEW`, `READ_ALOUD_PASS`, `COPYRIGHT_PASS` and
+`PUBLISH_READY` remain BLOCKED. The new entry does not alter the frozen GIF
+algorithms, `main`, or the story text. Keep Draft PR #5 open and unmerged.
+
+**Next executable task:** supply a legitimately recorded or synthesized female
+English narration package using the manifest contract. Import for audition,
+listen to each page with the user, verify publication rights separately, then
+derive a complete timeline from the measured, approved audio.
+
 The new work is in Draft PR #5 against `main`. Keep PR #3, #4 and #5 draft;
 do not merge any of them automatically. Use the remote branch ref for the
 current SHA, because editing this handoff itself creates a new commit.

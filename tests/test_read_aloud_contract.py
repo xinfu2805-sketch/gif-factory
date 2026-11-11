@@ -241,7 +241,8 @@ class ReadAloudContractTest(unittest.TestCase):
 
     def test_new_document_links_resolve(self):
         documents = [ROOT / "AGENTS.md", ROOT / "CURRENT_WORKFLOW_STATUS.md",
-                     SPEC / "WORKFLOW.md", ROOT / "research/xhs-read-aloud-v1/waiting-for-the-moon/STORY_AND_READING.md"]
+                     SPEC / "WORKFLOW.md", SPEC / "VOICE_IMPORT.md",
+                     ROOT / "research/xhs-read-aloud-v1/waiting-for-the-moon/STORY_AND_READING.md"]
         for document in documents:
             text = document.read_text()
             for target in re.findall(r"\[[^]]+\]\(([^)]+)\)", text):
