@@ -3,16 +3,89 @@
   "title_en": "Waiting for the Moon",
   "title_zh": "小兔子等月亮",
   "audience": "ages 4-7 with a caregiver",
+  "english_body_word_count": 99,
   "timing_status": "BLOCKED_PENDING_APPROVED_NARRATION",
-  "beats": ["hope_for_moon", "moon_absent", "rabbit_lonely", "stars_companion", "patient_wait", "moon_reveal", "safe_sleep"],
+  "beats": [
+    "hope_for_moon",
+    "moon_absent",
+    "rabbit_lonely",
+    "stars_companion",
+    "patient_wait",
+    "moon_reveal",
+    "safe_sleep"
+  ],
   "pages": [
-    {"page": 0, "role": "cover", "english": "Waiting for the Moon.", "chinese": "小兔子等月亮。", "emotion": "welcome", "visible_event": "rabbit on the hill at dusk", "pause_cue": "optional quiet title"},
-    {"page": 1, "role": "story", "english": "One evening, a little rabbit climbed a hill to see the moon.", "chinese": "一天傍晚，小兔子爬上山坡，想看看月亮。", "emotion": "hope", "visible_event": "rabbit climbs and settles on hill", "pause_cue": "warm invitation"},
-    {"page": 2, "role": "story", "english": "The sky turned dark, but the moon did not come. The rabbit waited.", "chinese": "天色渐渐暗了，月亮却没有出现。小兔子继续等着。", "emotion": "uncertainty", "visible_event": "sky darkens, moon absent", "pause_cue": "small pause after dark"},
-    {"page": 3, "role": "story", "english": "A cloud hid the moon. The rabbit's ears drooped. It felt lonely.", "chinese": "云朵挡住了月亮。小兔子的耳朵垂下来，心里有点孤单。", "emotion": "small sadness", "visible_event": "cloud masks moon and rabbit ears lower", "pause_cue": "gentle lowered energy on lonely"},
-    {"page": 4, "role": "story", "english": "One small star blinked. Another followed. Soon, the stars kept the rabbit company.", "chinese": "一颗小星星亮了，又亮起一颗。很快，星星们陪着小兔子。", "emotion": "companionship", "visible_event": "stars appear one by one and rabbit notices", "pause_cue": "pause between first and second star"},
-    {"page": 5, "role": "story", "english": "The rabbit smiled. It took a slow breath and waited with its new friends.", "chinese": "小兔子笑了，慢慢吸了一口气，和新朋友们一起等。", "emotion": "patience", "visible_event": "rabbit smiles and relaxes", "pause_cue": "unforced natural breath"},
-    {"page": 6, "role": "story", "english": "At last, the cloud drifted away. The round moon lit the hill softly.", "chinese": "终于，云朵飘走了。圆圆的月亮柔柔地照亮山坡。", "emotion": "relief", "visible_event": "cloud clears and full moon appears", "pause_cue": "gentle relief at At last"},
-    {"page": 7, "role": "story", "english": "“Good night, Moon,” whispered the rabbit. It curled up, feeling safe, and fell asleep.", "chinese": "“晚安，月亮。”小兔子轻声说着，安心地蜷起来睡着了。", "emotion": "rest", "visible_event": "rabbit curls up and sleeps in moonlight", "pause_cue": "soft whisper and settled ending"}
+    {
+      "page": 0,
+      "role": "cover",
+      "english": "Waiting for the Moon.",
+      "chinese": "小兔子等月亮。",
+      "emotion": "welcome",
+      "visible_event": "rabbit on the hill at dusk",
+      "pause_cue": "optional quiet title"
+    },
+    {
+      "page": 1,
+      "role": "story",
+      "english": "One evening, a little rabbit climbed a hill to see the moon.",
+      "chinese": "一天傍晚，小兔子爬上山坡，想看看月亮。",
+      "emotion": "hope",
+      "visible_event": "rabbit climbs and settles on hill",
+      "pause_cue": "warm invitation"
+    },
+    {
+      "page": 2,
+      "role": "story",
+      "english": "The sky grew darker, but the moon was nowhere to be seen. The rabbit waited.",
+      "chinese": "天色越来越暗，月亮却怎么也看不见。小兔子继续等着。",
+      "emotion": "uncertainty",
+      "visible_event": "sky darkens, moon not visible",
+      "pause_cue": "let nowhere to be seen carry quiet uncertainty; pause naturally before The rabbit waited"
+    },
+    {
+      "page": 3,
+      "role": "story",
+      "english": "A big cloud was hiding the moon. The rabbit’s ears drooped. It felt a little lonely.",
+      "chinese": "一大朵云把月亮藏了起来。小兔子的耳朵垂了下去，心里有一点孤单。",
+      "emotion": "small sadness",
+      "visible_event": "large cloud masks moon and rabbit ears lower",
+      "pause_cue": "soften on a little lonely; do not overact; check the spoken possessive rabbit’s"
+    },
+    {
+      "page": 4,
+      "role": "story",
+      "english": "One small star blinked. Another followed. Soon, the stars kept the rabbit company.",
+      "chinese": "一颗小星星亮了，又亮起一颗。很快，星星们陪着小兔子。",
+      "emotion": "companionship",
+      "visible_event": "stars appear one by one and rabbit notices",
+      "pause_cue": "pause between first and second star"
+    },
+    {
+      "page": 5,
+      "role": "story",
+      "english": "The rabbit smiled. It took a slow breath and waited with its new friends.",
+      "chinese": "小兔子笑了，慢慢吸了一口气，和新朋友们一起等。",
+      "emotion": "patience",
+      "visible_event": "rabbit smiles and relaxes",
+      "pause_cue": "unforced natural breath"
+    },
+    {
+      "page": 6,
+      "role": "story",
+      "english": "At last, the cloud drifted away. The round moon appeared, glowing softly above the hill.",
+      "chinese": "终于，云朵飘走了。圆圆的月亮露了出来，在山坡上方洒下柔柔的光。",
+      "emotion": "relief",
+      "visible_event": "cloud clears and full moon appears above the hill",
+      "pause_cue": "gentle relief at At last; ease into glowing softly without rushing the ending"
+    },
+    {
+      "page": 7,
+      "role": "story",
+      "english": "“Good night, Moon,” whispered the rabbit. It curled up, feeling safe, and fell asleep.",
+      "chinese": "“晚安，月亮。”小兔子轻声说着，安心地蜷起来睡着了。",
+      "emotion": "rest",
+      "visible_event": "rabbit curls up and sleeps in moonlight",
+      "pause_cue": "soft whisper and settled ending"
+    }
   ]
 }

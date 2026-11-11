@@ -3,6 +3,9 @@
   "default_scope": ["children_bedtime", "english_read_aloud", "bilingual_picture_book", "parent_child_reading"],
   "suggestions_not_limits": {"canvas": [1080, 1920], "pages_around": 8, "duration_seconds_range": [50, 70], "english_body_words_range": [70, 100]},
   "timeline_basis": "approved_narration_audio",
+  "timeline_page_roles": ["cover", "story"],
+  "silent_cover_policy": "only page 0; named human timing approval for display_duration_s and turn_s; no narration fields",
+  "story_page_policy": "real WAV, SHA-256, measured voice_duration_s and page-specific human voice approval required",
   "stages": [
     {"id": "STORY", "owner": "Story Expert", "human_review": false},
     {"id": "STORY_REVIEW", "owner": "Story Expert + Quality Director", "human_review": true},

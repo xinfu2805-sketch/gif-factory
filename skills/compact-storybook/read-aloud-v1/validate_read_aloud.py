@@ -75,7 +75,19 @@ def review_errors(review, root, contract=None):
             errors.append(f"stages.{spec['id']}: predecessor has not PASSed")
         if spec["id"] == "VOICE_REVIEW" and status == "PASS":
             items = stage.get("evidence", [])
-            wav_count = sum(str(item.get("path", "")).lower().endswith(".wav") for item in items if isinstance(item, dict))
+            wav_count = 0
+            for item in items:
+                if not isinstance(item, dict) or not str(item.get("path", "")).lower().endswith(".wav"):
+                    continue
+                path = (root / item["path"]).resolve()
+                if not path.is_relative_to(root) or not path.is_file():
+                    continue
+                try:
+                    with wave.open(str(path)) as wav:
+                        if wav.getnframes() > 0 and wav.getframerate() > 0:
+                            wav_count += 1
+                except wave.Error:
+                    errors.append(f"stages.VOICE_REVIEW: invalid WAV audition {item['path']}")
             license_count = sum(item.get("kind") == "license" for item in items if isinstance(item, dict))
             if wav_count < 2 or license_count < 1:
                 errors.append("stages.VOICE_REVIEW: two WAV auditions and license evidence required")
@@ -94,13 +106,56 @@ def review_errors(review, root, contract=None):
             errors.append("TIMELINE PASS requires measured narration pages")
         else:
             total = 0.0
+            story_pages = 0
             for i, page in enumerate(pages):
                 label = f"timeline.pages[{i}]"
-                if not isinstance(page, dict) or page.get("audio_approved") is not True:
-                    errors.append(f"{label}: approved narration clip required")
+                if not isinstance(page, dict):
+                    errors.append(f"{label}: page must be an object")
                     continue
+                role = page.get("role")
+                if role == "cover":
+                    if i != 0:
+                        errors.append(f"{label}: silent cover must be page 0")
+                    if any(key in page for key in ("audio_approved", "audio_path", "audio_sha256", "voice_duration_s", "voice_review")):
+                        errors.append(f"{label}: silent cover cannot claim narration fields")
+                    cover_review = page.get("cover_review")
+                    if checked_decision(cover_review, f"{label}.cover_review", True) != "PASS":
+                        errors.append(f"{label}: silent cover display and turn need human approval")
+                    items = cover_review.get("evidence", []) if isinstance(cover_review, dict) else []
+                    if not any(isinstance(item, dict) and item.get("kind") == "timing_approval" for item in items):
+                        errors.append(f"{label}: cover timing approval evidence required")
+                    try:
+                        duration = float(page["display_duration_s"])
+                        turn = float(page["turn_s"])
+                        if not math.isfinite(duration) or not math.isfinite(turn) or duration <= 0 or turn <= 0:
+                            errors.append(f"{label}: cover display and turn must be positive measured decisions")
+                        approved_display = float(cover_review["approved_display_duration_s"])
+                        approved_turn = float(cover_review["approved_turn_s"])
+                        if (not math.isfinite(approved_display) or not math.isfinite(approved_turn) or
+                            abs(approved_display - duration) > .01 or abs(approved_turn - turn) > .01):
+                            errors.append(f"{label}: human cover review must approve these exact display and turn seconds")
+                        total += duration + turn
+                    except (KeyError, TypeError, ValueError):
+                        errors.append(f"{label}: approved cover display_duration_s and turn_s required")
+                    continue
+                if role != "story":
+                    errors.append(f"{label}: role must be cover or story")
+                    continue
+                story_pages += 1
+                if page.get("audio_approved") is not True:
+                    errors.append(f"{label}: approved narration clip required")
+                voice_review = page.get("voice_review")
+                if checked_decision(voice_review, f"{label}.voice_review", True) != "PASS":
+                    errors.append(f"{label}: story narration needs human voice approval")
+                if not isinstance(voice_review, dict) or voice_review.get("approved_audio_sha256") != page.get("audio_sha256"):
+                    errors.append(f"{label}: voice approval must bind to this WAV SHA-256")
+                items = voice_review.get("evidence", []) if isinstance(voice_review, dict) else []
+                if not any(isinstance(item, dict) and item.get("kind") == "voice_approval" for item in items):
+                    errors.append(f"{label}: voice approval evidence required")
                 path = evidence_file({"path": page.get("audio_path"), "sha256": page.get("audio_sha256"),
                                       "observation": "Measured approved narration audio clip"}, label)
+                if path and path.suffix.lower() != ".wav":
+                    errors.append(f"{label}: story narration must be a real WAV")
                 try:
                     voice = float(page["voice_duration_s"])
                     lead = float(page["lead_s"])
@@ -121,6 +176,8 @@ def review_errors(review, root, contract=None):
                             errors.append(f"{label}: stated voice seconds differ from WAV")
                 except (KeyError, TypeError, ValueError, wave.Error) as exc:
                     errors.append(f"{label}: invalid timing or WAV: {exc}")
+            if story_pages == 0:
+                errors.append("TIMELINE PASS requires at least one narrated story page")
             try:
                 if abs(float(timeline["total_duration_s"]) - total) > .05:
                     errors.append("timeline total must equal the page and turn sum")

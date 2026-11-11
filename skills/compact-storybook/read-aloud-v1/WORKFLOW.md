@@ -38,7 +38,7 @@ file existence alone.
 | `STORY_REVIEW` · Story Expert + Quality Director | Story draft → child comprehension and bedtime editorial notes | Actual reviewer observations for plot and language. FAIL if a child cannot follow cause and outcome; BLOCKED until human review. |
 | `READING_SCRIPT` · Read-Aloud Director | Reviewed story → speakable English, Chinese translation, pronunciation and pause cues | Page-aligned text and word count, no forced page seconds. FAIL for unnatural prose, literal translation or missing event; BLOCKED if story review is open. |
 | `VOICE_REVIEW` · Read-Aloud Director + Sound Director | Reading script, licensed voice option → two raw auditions, chosen performance, full line recordings | Model/source/license and two audition files; human notes on diction, breath, warmth and pauses. FAIL for skipped words, mechanical acting or clipping; BLOCKED without listening or usable rights. |
-| `TIMELINE` · Storyboard Director | Approved, measured narration clips → page windows, comprehension holds, turn windows and storyboard | Each page cites clip SHA-256 and measured seconds; page time covers speech plus meaning/visual hold; total is derived. FAIL if speech is cut or an action precedes its narration; BLOCKED before voice approval. |
+| `TIMELINE` · Storyboard Director | Approved, measured narration clips → page windows, comprehension holds, turn windows and storyboard | Every **story page** cites its real WAV, SHA-256, measured seconds and page-specific human voice approval; page time covers speech plus meaning/visual hold. A declared **silent cover at page 0** may instead use human-approved display and turn seconds. Total is derived. FAIL if speech is cut or an action precedes its narration; BLOCKED before voice approval. |
 | `ART` · Watercolor Artist | Timed storyboard, reference identity → model sheet, page paintings and clean subtitle zones | Contact sheet and source hashes, stable face/palette/props. FAIL for identity drift, wrong text embedded in art or unreadable safe area; BLOCKED pending visual review. |
 | `ANIMATION` · Animation Director | Approved art and timed beats → local character/environment/action layers and page turns | Decoded first/middle/last and contact frames, object-state continuity. FAIL for duplicate props, false whole-page motion or unresolved contact; BLOCKED without actual frame review. |
 | `SOUND_SUBTITLES` · Sound Director | Timed clips, licensed music/effects, translations → separate voice/music/FX, ducked mix, bilingual captions | Signal report, per-stem listen notes, subtitle proof. FAIL for masking, mismatch, harsh sound or wrong glyphs; BLOCKED for music source, translation or listening gaps. |
@@ -66,6 +66,20 @@ understands the story or whether narration feels natural. Every `PASS` for the
 eight criteria needs a named human reviewer, a specific observation and a
 hashed evidence file. `READ_ALOUD_PASS` remains `BLOCKED` until the full
 human review is complete. Technical `PASS` never implies publication `PASS`.
+
+### Timeline cover exception
+
+The title/cover may be silent **only** as page 0 with `role: "cover"`. It has
+`display_duration_s`, `turn_s` and a `cover_review` decision with a named
+human, `timing_approval` evidence and a SHA-256. The review repeats the exact
+approved display and turn seconds. It must not claim an audio
+file or `voice_duration_s`. Body pages use `role: "story"` and retain a real
+WAV file, its SHA-256, measured duration, `audio_approved: true` and a
+page-specific human `voice_review` with `voice_approval` evidence bound to
+that WAV's SHA-256. The total
+is the sum of page display times and turns; there is no fixed target duration.
+The validator rejects a silent body page or an unreviewed cover. A cover
+exception does not waive the `VOICE_REVIEW` gate for the narrated story.
 
 Copy [acceptance_template.json](acceptance_template.json) into a project and
 run `python3 skills/compact-storybook/read-aloud-v1/validate_read_aloud.py
