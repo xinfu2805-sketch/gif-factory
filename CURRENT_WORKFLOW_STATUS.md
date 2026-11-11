@@ -57,9 +57,10 @@ Evidence source: `git ls-remote origin refs/heads/main refs/heads/research/xhs-s
 ## Open blockers and next executable task
 
 The new rabbit story text has **not** received formal human editorial or
-child-comprehension signoff: `STORY_REVIEW=BLOCKED`. The two audition WAVs
-have been technically measured but **not heard or accepted by the user**:
-`VOICE_REVIEW=BLOCKED`. The five other story pages have no recorded narration.
+child-comprehension signoff: `STORY_REVIEW=BLOCKED`. The two Kokoro audition
+WAVs were technically measured, then **heard and rejected by the user for
+artistic quality**: `VOICE_REVIEW=BLOCKED`. The five other story pages have no
+recorded narration.
 No approved full-story page durations, art, animation or complete video have
 been created for this V1 pilot. The eight human read-aloud criteria, all release
 gates and `PUBLISH_READY` are **BLOCKED** in the pilot's
@@ -67,12 +68,21 @@ gates and `PUBLISH_READY` are **BLOCKED** in the pilot's
 The earlier R2 TimGM6mb lullaby still lacks verified Xiaohongshu distribution
 clearance; do not carry its existence into `COPYRIGHT_PASS`.
 
-**Next task:** ask the user to listen to the page 03 and 07 raw WAVs for
-pronunciation, restrained sadness, warmth and a natural final cadence.
-Record the verdict; if accepted, complete formal story review and record the
-remaining page narrations at natural speed. Only after each page has approved
-WAV evidence should the Storyboard Director derive the full page and turn
-timings. Do not reuse the R4 33.333-second timeline or batch-render a film now.
+**VOICE-PERFORMANCE-R1 update (2026-11-11):** The user heard and rejected the
+Kokoro `af_sol` auditions for artistic quality: they sound like English
+listening material rather than a warm bedtime narration. Azure Speech F0
+preflight stopped at [FIRST_DIVERGENCE](research/xhs-read-aloud-v1/waiting-for-the-moon/voice/VOICE_PERFORMANCE_R1.md): no account credentials, resource region,
+F0 proof or quota access; one unauthenticated request was blocked by the
+environment proxy with HTTP 403. No Azure audio or ZIP was generated. Official
+Microsoft Product Terms grant prebuilt neural voice output use rights to paid
+TTS customers only, so F0 is not a proven publication source. `VOICE_REVIEW`,
+`READ_ALOUD_PASS` and `PUBLISH_READY` remain BLOCKED.
+
+**Next task:** establish a reachable and authorized voice source and release
+rights. Then audition page 03 and 07 in two female voices without changing the
+frozen text; submit the real WAVs for user listening. Only after approval should
+the Storyboard Director derive timings. Do not reuse the fixed 33.333-second
+timeline or batch-render a film now.
 
 The new work is in Draft PR #5 against `main`. Keep PR #3, #4 and #5 draft;
 do not merge any of them automatically. Use the remote branch ref for the
