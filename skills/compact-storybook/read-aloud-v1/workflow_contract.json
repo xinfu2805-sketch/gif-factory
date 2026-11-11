@@ -1,0 +1,22 @@
+{
+  "version": "XHS-READ-ALOUD-V1",
+  "default_scope": ["children_bedtime", "english_read_aloud", "bilingual_picture_book", "parent_child_reading"],
+  "suggestions_not_limits": {"canvas": [1080, 1920], "pages_around": 8, "duration_seconds_range": [50, 70], "english_body_words_range": [70, 100]},
+  "timeline_basis": "approved_narration_audio",
+  "stages": [
+    {"id": "STORY", "owner": "Story Expert", "human_review": false},
+    {"id": "STORY_REVIEW", "owner": "Story Expert + Quality Director", "human_review": true},
+    {"id": "READING_SCRIPT", "owner": "Read-Aloud Director", "human_review": false},
+    {"id": "VOICE_REVIEW", "owner": "Read-Aloud Director + Sound Director", "human_review": true},
+    {"id": "TIMELINE", "owner": "Storyboard Director", "human_review": false},
+    {"id": "ART", "owner": "Watercolor Artist", "human_review": true},
+    {"id": "ANIMATION", "owner": "Animation Director", "human_review": true},
+    {"id": "SOUND_SUBTITLES", "owner": "Sound Director", "human_review": true},
+    {"id": "FULL_AV_REVIEW", "owner": "Quality Director", "human_review": true},
+    {"id": "RIGHTS_TECH", "owner": "Quality Director", "human_review": true},
+    {"id": "EXPORT", "owner": "Quality Director", "human_review": true}
+  ],
+  "read_aloud_criteria": ["STORY_COMPLETE", "CHILD_COMPREHENSION", "NARRATION_NATURAL", "READING_RHYTHM", "AUDIO_VISUAL_SYNC", "PAGE_READING_TIME", "BEDTIME_SUITABILITY", "ENDING_QUALITY"],
+  "release_gates": ["TECHNICAL_PASS", "VISUAL_PASS", "ACTION_PASS", "AUDIO_PASS", "EDITORIAL_PASS", "COPYRIGHT_PASS", "READ_ALOUD_PASS", "PUBLISH_READY"],
+  "human_gates": ["VISUAL_PASS", "ACTION_PASS", "AUDIO_PASS", "EDITORIAL_PASS", "COPYRIGHT_PASS", "READ_ALOUD_PASS", "PUBLISH_READY"]
+}

@@ -1,0 +1,161 @@
+{
+  "workflow_version": "XHS-READ-ALOUD-V1",
+  "project_id": "waiting-for-the-moon-r4-read-aloud-pilot",
+  "stages": [
+    {
+      "id": "STORY",
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "STORY_REVIEW",
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "READING_SCRIPT",
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "VOICE_REVIEW",
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "TIMELINE",
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "ART",
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "ANIMATION",
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "SOUND_SUBTITLES",
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "FULL_AV_REVIEW",
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "RIGHTS_TECH",
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "EXPORT",
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    }
+  ],
+  "timeline": {
+    "basis": "approved_narration_audio",
+    "pages": [],
+    "total_duration_s": null
+  },
+  "read_aloud_checks": {
+    "STORY_COMPLETE": {
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    "CHILD_COMPREHENSION": {
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    "NARRATION_NATURAL": {
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    "READING_RHYTHM": {
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    "AUDIO_VISUAL_SYNC": {
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    "PAGE_READING_TIME": {
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    "BEDTIME_SUITABILITY": {
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    "ENDING_QUALITY": {
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    }
+  },
+  "gates": {
+    "TECHNICAL_PASS": {
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    "VISUAL_PASS": {
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    "ACTION_PASS": {
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    "AUDIO_PASS": {
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    "EDITORIAL_PASS": {
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    "COPYRIGHT_PASS": {
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    "READ_ALOUD_PASS": {
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    },
+    "PUBLISH_READY": {
+      "status": "BLOCKED",
+      "evidence": [],
+      "reviewer": null
+    }
+  }
+}
