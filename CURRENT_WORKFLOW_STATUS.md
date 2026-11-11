@@ -12,7 +12,7 @@ observations, not permanent aliases for `main`.
 | `main` | `a4e2d6d853c91e9ec25d77c7819b3f09e0a11385` |
 | R2 `research/xhs-storybook-production-r2` / [Draft PR #3](https://github.com/xinfu2805-sketch/gif-factory/pull/3) | `9f8d215e145cda5b91d73950b3b8c02c90f959ad`; open, draft, unmerged; base `research/xhs-storybook-publish-v1` |
 | R3E `research/xhs-storybook-english-r3e` / [Draft PR #4](https://github.com/xinfu2805-sketch/gif-factory/pull/4) | `8d3a6d4f37c7bb33a6792a5ef8c650bb1c2700a5`; open, draft, unmerged; base R2 branch |
-| New `research/xhs-read-aloud-v1` | Branched from the observed `main`; latest SHA is the remote branch ref after this PR is pushed. |
+| New `research/xhs-read-aloud-v1` / [Draft PR #5](https://github.com/xinfu2805-sketch/gif-factory/pull/5) | Branched from the observed `main`; open, draft, unmerged. Resolve its latest SHA from the remote branch ref. |
 
 Evidence source: `git ls-remote origin refs/heads/main refs/heads/research/xhs-storybook-production-r2 refs/heads/research/xhs-storybook-english-r3e refs/pull/3/head refs/pull/4/head`, public PR HTML, and the connected GitHub tool's `get_pr_info` for PR #3/#4. Direct `gh` GraphQL and REST calls returned **403 Forbidden** in this environment; the connected GitHub tool supplied the verified state, base and merged fields. Both PRs remain separate and unmerged in this work.
 
@@ -54,6 +54,6 @@ Record human listening notes and exact WAV durations. Only after approval
 should the Storyboard Director derive page and turn seconds. Do not reuse the
 R4 33.333-second timeline or batch-render a film now.
 
-For this new change, use a Draft PR into `main`; keep PR #3 and #4 draft and
-do not merge them. The new PR number and final branch HEAD are recorded in the
-handoff once GitHub creates it.
+The new work is in Draft PR #5 against `main`. Keep PR #3, #4 and #5 draft;
+do not merge any of them automatically. Use the remote branch ref for the
+current SHA, because editing this handoff itself creates a new commit.
