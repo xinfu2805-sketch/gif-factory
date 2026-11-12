@@ -1,0 +1,41 @@
+{
+  "technical_result": "PASS_FOR_TWO_AUDITIONS_ONLY",
+  "human_listening": "BLOCKED",
+  "no_music_or_reverb": "direct raw synthesis; no postprocessing",
+  "tokenizer_warning_log_bytes": 0,
+  "clips": [
+    {
+      "page": 3,
+      "filename": "page_03_af_sol_audition.wav",
+      "sha256": "e09e85f45306b842ae0e2bbd22005a3b1a8704d2137438670d814d5cbd89f011",
+      "duration_s": 4.983042,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "bits_per_sample": 16,
+      "decoded_without_error": true,
+      "peak_dbfs": -4.201,
+      "rms_dbfs": -22.896,
+      "non_silent": true,
+      "leading_silence_s": 0.04925,
+      "trailing_silence_s": 0.058208,
+      "last_50ms_rms": 0.001085
+    },
+    {
+      "page": 7,
+      "filename": "page_07_af_sol_audition.wav",
+      "sha256": "2eec697d827884f02d343bb3280a2164dd4d5fbe94b91c07e38fd3c614f7df7e",
+      "duration_s": 4.922875,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "bits_per_sample": 16,
+      "decoded_without_error": true,
+      "peak_dbfs": -5.84,
+      "rms_dbfs": -23.055,
+      "non_silent": true,
+      "leading_silence_s": 0.051875,
+      "trailing_silence_s": 0.011583,
+      "last_50ms_rms": 0.001693
+    }
+  ],
+  "note": "Signal and decoder checks do not certify pronunciation, emotional acting or bedtime suitability."
+}

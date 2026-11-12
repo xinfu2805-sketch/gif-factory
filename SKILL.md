@@ -22,6 +22,7 @@ Human-facing name: **GIF 工厂 / GIF Factory**. Keep the existing `$pixel-gif-s
 | 演出预告／角色主视觉／人物与字体联动／P5 式整体融合海报 | [Dynamic posters](references/dynamic-posters.md) |
 | 吉祥物带动产品、包装与品牌的短片 | [Brand films](references/brand-film.md) |
 | 动态绘本／固定画面叙事／页内单次动作／翻书故事 | [Compact storybooks](references/storybook.md), then [standalone Skill](skills/compact-storybook/SKILL.md) |
+| 儿童睡前有声绘本／英文朗读／中英双语字幕亲子共读 | [Compact storybooks](skills/compact-storybook/SKILL.md), then [XHS-READ-ALOUD-V1](skills/compact-storybook/read-aloud-v1/WORKFLOW.md) |
 
 For dynamic posters, distinguish **preserve artwork + animated type** from **integrated artwork/background/type redesign**. The approved P5-inspired route is a limited-palette, ink/halftone composition with meaningful character-state contrast and type interacting with the figure; it is not letter stickers pasted onto unchanged full-color artwork. The current nine-poster examples encode two complete poster key states, not independently animated glyphs. Read only the selected purpose reference; a GIF preview of a game UI is not a working interactive UI.
 
