@@ -106,3 +106,10 @@ derive a complete timeline from the measured, approved audio.
 The new work is in Draft PR #5 against `main`. Keep PR #3, #4 and #5 draft;
 do not merge any of them automatically. Use the remote branch ref for the
 current SHA, because editing this handoff itself creates a new commit.
+
+## GIF-FIRST-ACTION-R1 update (2026-11-12)
+
+- Added [GIF animation gate](skills/compact-storybook/read-aloud-v1/GIF_ACTION_GATE.md) to the scoped read-aloud route. Character acting is checked as one-shot GIF before full MP4 production; this does not alter the story-first / approved-voice timing authority.
+- Added [one-shot GIF exporter](scripts/export_storybook_gif.py) and [two action-preflight regression tests](tests/test_storybook_gif_action.py). Local prototype tests passed 2/2; full repository suite remains to be rerun in its environment. Pixel change and GIF existence do **not** grant ACTION_PASS.
+- No genuine rabbit pose atlas has been approved in this work. The requested sad / falling-asleep actions still need multiple identity-stable source poses; **ACTION_PASS remains BLOCKED**. VOICE_REVIEW, COPYRIGHT_PASS and PUBLISH_READY are unchanged / BLOCKED.
+- Main is untouched; the additions are in the existing research branch and Draft PR #5. No merge was performed.
