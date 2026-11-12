@@ -23,6 +23,22 @@ is an independently rendered smaller translation. Keep a watercolor paper
 look, consistent character and low-stimulation bedtime sound. Each page must
 advance an event, emotion or understanding. A static wait cannot fill time.
 
+## GIF-first character performance gate
+
+For narrated picture-book scenes requiring character acting, follow
+[GIF-FIRST-ACTION-R1](GIF_ACTION_GATE.md) after the timed storyboard and approved art, inside the
+ANIMATION stage. Draw genuinely distinct start / intermediate / end poses,
+preserve identity, body-part anchors, contact, and camera; render one-shot GIF
+pilots before assembling MP4. A static rabbit with only clouds and stars
+moving is **not** an accepted action. The GIF exporter verifies file and
+subject-ROI changes, but cannot award subjective ACTION_PASS. The final
+Xiaohongshu video still uses MP4 for voices, captions and music.
+
+This does **not** move ANIMATION before VOICE_REVIEW or TIMELINE for formal
+production; visual-only research GIFs may be made earlier and explicitly
+remain outside approved final timing. Neither production format alone can
+satisfy VOICE_REVIEW, READ_ALOUD_PASS or PUBLISH_READY.
+
 ## Stages and evidence
 
 The IDs and order are machine-readable in [workflow_contract.json](workflow_contract.json).
@@ -40,7 +56,7 @@ file existence alone.
 | `VOICE_REVIEW` · Read-Aloud Director + Sound Director | Reading script, licensed voice option → two raw auditions, chosen performance, full line recordings | Model/source/license and two audition files; human notes on diction, breath, warmth and pauses. FAIL for skipped words, mechanical acting or clipping; BLOCKED without listening or usable rights. |
 | `TIMELINE` · Storyboard Director | Approved, measured narration clips → page windows, comprehension holds, turn windows and storyboard | Every **story page** cites its real WAV, SHA-256, measured seconds and page-specific human voice approval; page time covers speech plus meaning/visual hold. A declared **silent cover at page 0** may instead use human-approved display and turn seconds. Total is derived. FAIL if speech is cut or an action precedes its narration; BLOCKED before voice approval. |
 | `ART` · Watercolor Artist | Timed storyboard, reference identity → model sheet, page paintings and clean subtitle zones | Contact sheet and source hashes, stable face/palette/props. FAIL for identity drift, wrong text embedded in art or unreadable safe area; BLOCKED pending visual review. |
-| `ANIMATION` · Animation Director | Approved art and timed beats → local character/environment/action layers and page turns | Decoded first/middle/last and contact frames, object-state continuity. FAIL for duplicate props, false whole-page motion or unresolved contact; BLOCKED without actual frame review. |
+| `ANIMATION` · Animation Director | Approved art and timed beats → local character/environment/action layers and page turns | One-shot action GIF (see [GIF gate](GIF_ACTION_GATE.md)), decoded first/middle/last/contact frames, body-part/prop continuity. FAIL for duplicate props, false whole-page motion or unresolved contact; BLOCKED without actual frame review. |
 | `SOUND_SUBTITLES` · Sound Director | Timed clips, licensed music/effects, translations → separate voice/music/FX, ducked mix, bilingual captions | Signal report, per-stem listen notes, subtitle proof. FAIL for masking, mismatch, harsh sound or wrong glyphs; BLOCKED for music source, translation or listening gaps. |
 | `FULL_AV_REVIEW` · Quality Director with all directors | Full draft → page-by-page sight/listen record and eight read-aloud criteria | Human observations on story, reading, movement, sync and ending at actual viewing size. FAIL for material mismatch; BLOCKED for any unreviewed criterion. |
 | `RIGHTS_TECH` · Quality Director | Full draft and asset ledger → ffprobe/decode/hash results and platform-use rights record | Exact media stats, independent stems, traceable asset licenses. FAIL for corrupt/misaligned output or denied rights; BLOCKED for unresolved platform rights. |
